@@ -14,11 +14,11 @@ void crearLista (ST_LISTAAVIONES**cabecera){
 }
 
 void insertarOrdenado (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
-    ST_LISTAAVIONES * busqueda = buscarIDEnLista(avion.id, cabecera);
+    /*ST_LISTAAVIONES * busqueda = buscarIDEnLista(avion.id, cabecera);
     if (busqueda!=NULL){
         perror("Elemento existente");
-    return;
-    }
+        return;
+    }*/
 
     ST_LISTAAVIONES * nodo = (ST_LISTAAVIONES*)malloc(sizeof(ST_LISTAAVIONES));
     nodo->avion = avion;
@@ -110,6 +110,7 @@ void recibirMensaje (ST_LISTAAVIONES ** lista, ST_AVION * avion, int cliente, ch
                 avion->cantCombustible = atoi (cantComb);
                 insertarOrdenado(&lista,*avion);
                 mostrarLista(&lista);
+                send(cliente, "0", 2, 0);
                 break;
                 case 2:
 

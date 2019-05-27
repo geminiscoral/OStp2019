@@ -4,7 +4,7 @@
 
 1555445778 /home/paula/Documentos/SO/Aeropuerto/funciones.h
 
-1558938086 source:/home/paula/Documentos/SO/Aeropuerto/main.c
+1558954495 source:/home/paula/Documentos/SO/Aeropuerto/main.c
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -23,7 +23,7 @@
 
 1558934725 /home/paula/Documentos/SO/Aeropuerto/aviones.h
 
-1558937989 source:/home/paula/Documentos/SO/Aeropuerto/listaAviones.c
+1558955221 source:/home/paula/Documentos/SO/Aeropuerto/listaAviones.c
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>

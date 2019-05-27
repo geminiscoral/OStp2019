@@ -3,12 +3,17 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <arpa/inet.h>
-#include <sys/socket.h>
 #define tamanioBufferMensaje 100
 
+int conectar (int cliente, struct sockaddr_in direccionServidor){
+        if (connect(cliente, (void*) &direccionServidor, sizeof(direccionServidor)) != 0) {
+                perror("No se pudo conectar");
+                return 1;
+            }
+}
 
-void abrirConsola(int cliente, char * IP, char * puerto,  ST_AVION *avion){
+
+void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, char*puerto, ST_AVION *avion){
     printf("\n Bienvenido al sistema de control del avion\n");
     printf ("\nEl ID del avion es %s", avion->id);
     printf ("\nEl modelo del avion es %s", avion->modelo);
@@ -28,36 +33,40 @@ void abrirConsola(int cliente, char * IP, char * puerto,  ST_AVION *avion){
     switch (N){
         case 1:
         system("clear");
+        conectar(cliente, direccionServidor);
         char* msj1 = armarMensaje(cliente,IP,puerto, avion, 1);
         send(cliente, msj1, tamanioBufferMensaje, 0);
 
-        abrirConsola(cliente, IP, puerto, avion);
+        abrirConsola(direccionServidor, cliente, IP, puerto, avion);
         break;
         case 2:
         system("clear");
+        conectar(cliente, direccionServidor);
         char* msj2 = armarMensaje(cliente,IP,puerto, avion, 2);
         send(cliente, msj2, tamanioBufferMensaje, 0);
 
-        abrirConsola(cliente, IP, puerto, avion);
+        abrirConsola(direccionServidor, cliente, IP, puerto, avion);
         break;
         case 3:
         system("clear");
+        conectar(cliente, direccionServidor);
         char* msj3 = armarMensaje(cliente,IP,puerto, avion, 3);
         send(cliente, msj3, tamanioBufferMensaje, 0);
 
-        abrirConsola(cliente, IP, puerto, avion);
+        abrirConsola(direccionServidor, cliente, IP, puerto, avion);
         break;
         case 4:
         system("clear");
+        conectar(cliente, direccionServidor);
         char* msj4 = armarMensaje(cliente,IP,puerto, avion, 4);
         send(cliente, msj4, tamanioBufferMensaje, 0);
 
-        abrirConsola(cliente, IP, puerto, avion);
+        abrirConsola(direccionServidor, cliente, IP, puerto, avion);
         break;
         case 5:
         system("clear");
         mostrarEstadoAvion(avion);
-        abrirConsola(cliente, IP, puerto, avion);
+        abrirConsola(direccionServidor, cliente, IP, puerto, avion);
         break;
     }
 }

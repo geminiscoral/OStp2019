@@ -30,19 +30,21 @@ int main(void) {
 
 	//------------------------------
 
-	struct sockaddr_in direccionCliente;
-	unsigned int tamanioDireccion = sizeof(struct sockaddr_in);
-	int cliente = accept(servidor, (void*) &direccionCliente, &tamanioDireccion);
-
-	printf("Recibí una conexión en %d!!\n", cliente);
-
-	//------------------------------
-
 	ST_AVION avion;
 	ST_LISTAAVIONES * listaAvion;
 	crearLista(&listaAvion);
 	char * bufferMensaje = (char*)malloc(tamanioBufferMensaje);
+
     while (1){
+
+        struct sockaddr_in direccionCliente;
+        unsigned int tamanioDireccion = sizeof(struct sockaddr_in);
+        int cliente = accept(servidor, (void*) &direccionCliente, &tamanioDireccion);
+
+        printf("Recibí una conexión en %d!!\n", cliente);
+
+        //------------------------------
+
         recibirMensaje(&listaAvion, &avion, cliente, bufferMensaje);
         /*printf("ID: %i", avion.id);
         printf("Modelo: %s", avion.modelo);

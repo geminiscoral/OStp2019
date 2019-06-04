@@ -1,5 +1,0 @@
-commit 84b9a8a5667082092aa529c4940f66c75ee5436f
-Author: geminiscoral <geminiscoral@hotmail.com>
-Date:   Sun Jun 2 11:58:24 2019 -0300
-
-    empezamos version 1.0

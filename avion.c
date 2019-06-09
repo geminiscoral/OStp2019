@@ -7,6 +7,7 @@
 #define longComb 10
 #define tamanioMaxLinea 50
 #define tamanioBufferMensaje 100
+#define longMensajeRecibido 2
 
 
    char strtoi (int N){
@@ -110,42 +111,41 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
         scanf("%i", &avion->cantCombustible);
     }
 
-    int recibirMensaje (int cliente, char * IP, char * puerto, ST_AVION * avion, int opcion, char * buffer){
-                int bytesRecibidos = recv(cliente, buffer, sizeof(buffer), 0);
+    int recibirMensaje (int cliente, int opcion, ST_AVION * avion, int * pistaAsignada){
+                char * bufferRecibido = (char*)malloc(longMensajeRecibido);
+                int bytesRecibidos = recv(cliente, bufferRecibido, sizeof(bufferRecibido), 0);
                 if (bytesRecibidos <= 0) {
                     perror("El chabón se desconectó o bla.");
+                    return 1;
                     }
-                     return 1;
-                int intAux;
-                char aux;
-                strcpy (&aux, strtok(buffer,";"));
-                intAux = atoi(aux);
-                if (cliente != intAux){
-                    perror("El cliente no coincide.");
-                }
-                if (strcmp(strtok (NULL,";"),IP)!=0){
-                    perror("La direccion IP no coincide.");
-                }
-                if (strcmp(strtok (NULL,";"),puerto)!=0){
-                    perror("El puerto no coincide.");
-                }
-                if (strcmp(strtok (NULL,";"),avion->id)!=0){
-                    perror("El ID del avion no coincide.");
-                }
-                strcpy(&aux,strtok(NULL,";"));
-                intAux = atoi(&aux);
-                switch (intAux){
+                int aux;
+                aux = atoi(bufferRecibido);
+                switch (opcion){
                     case 1:
-                    strcmp(strtok(NULL,";"),"0");
-                    printf("El avion se registro correctamente.\n");
+                    if (aux==0){
+                    printf ("\n El avion se registrò correctamente\n");
+                        if (avion->estado=='h'){
+                            avion->estado = 'g';
+                        }
+                    }
                     break;
                     case 2:
+                    if (aux==0){
+                    printf ("\n Se realizò correctamente la solicitud de pista\n");
+                    }
                     break;
                     case 3:
+                    if (aux==0){
+                    printf ("\n La operacion se relizo exitosamente\n");
+                    }
                     break;
                     case 4:
+                    if (aux==0){
+                    printf ("\n La operacion se relizo exitosamente\n");
+                    }
                     break;
                 }
+                free(bufferRecibido);
         }
 
 

@@ -35,3 +35,19 @@
         return cadena;
     }
 
+    void registrarAvion (ST_AVION * avion){
+            if (avion->estado == 'h'){
+                    avion->estado = 'g';
+            }
+    }
+
+    void enviarMensaje (int cliente, int opcion){
+            switch(opcion){
+                case 0: // La solicitud se proceso exitosamente
+                    send(cliente, "0", 2, 0);
+                break;
+                case 1: // La pista fue cedida a cliente
+                    send(cliente, "1", 2, 0);
+                break;
+            }
+    }

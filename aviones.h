@@ -14,4 +14,8 @@ char strtoi (int N);
 
 char * enteroACadena (int valor, char * cadena);
 
+void enviarMensaje (int cliente, int opcion);
+
+void registrarAvion (ST_AVION * avion);
+
 #endif // AVIONES_H_INCLUDED

@@ -16,6 +16,7 @@ int main(int argc, char * argv []) {
     char * strPuerto = (char*)malloc (LongPuerto);
     int puerto = 0;
     ST_AVION avion;
+    int pistaAsignada = 0;
 
 
     parsearTextoParametro(argv [1], IP, strPuerto, &puerto, avion.id, avion.modelo, &avion.capMax);
@@ -34,7 +35,7 @@ int main(int argc, char * argv []) {
 
     system ("clear");
 
-    abrirConsola(direccionServidor, cliente, IP, strPuerto, &avion);
+    abrirConsola(direccionServidor, cliente, IP, strPuerto, &avion, &pistaAsignada);
 
     return 0;
 }

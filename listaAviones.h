@@ -8,6 +8,16 @@ typedef struct listaAviones {
     struct listaAviones * ste;
 }ST_LISTAAVIONES;
 
+typedef struct {
+    ST_LISTAAVIONES *cabecera;
+    ST_LISTAAVIONES *fin;
+}ST_COLA;
+
+void crearCola(ST_COLA * cola);
+
+void agregarACola (ST_COLA * cola, ST_AVION * avion);
+
+ST_AVION eliminarDeCola (ST_COLA * cola);
 
 void crearLista (ST_LISTAAVIONES**cabecera);
 
@@ -19,6 +29,10 @@ ST_LISTAAVIONES * buscarIDEnLista (int ID, ST_LISTAAVIONES ** cabecera);
 
 void  eliminarDeLista (int ID, ST_LISTAAVIONES ** cabecera);
 
-void recibirMensaje (ST_LISTAAVIONES ** lista, ST_AVION * avion, int cliente, char * buffer);
+void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion);
+
+void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, ST_AVION * avion);
+
+void recibirMensaje (int * IDReservaPista, ST_LISTAAVIONES ** lista, ST_LISTAAVIONES ** colaAterrizar,ST_COLA * colaDespegar , ST_AVION * avion, int cliente, char * buffer);
 
 #endif // LISTAAVIONES_H_INCLUDED

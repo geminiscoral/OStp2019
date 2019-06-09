@@ -17,7 +17,7 @@ void mostrarEstadoAvion (ST_AVION *avion);
 
 char * armarMensaje(int cliente, char * IP, char * puerto, ST_AVION * avion, int charOpcion);
 
-int recibirMensaje (int cliente, char * IP, char * puerto, ST_AVION * avion, int opcion, char * buffer);
+int recibirMensaje (int cliente, int opcion, ST_AVION * avion, int * pistaAsignada);
 
 char strtoi (int N);
 

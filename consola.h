@@ -5,6 +5,6 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
-void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, char*puerto, ST_AVION *avion);
+void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, char*puerto, ST_AVION *avion, int * pistaAsignada);
 
 #endif // CONSOLA_H_INCLUDED

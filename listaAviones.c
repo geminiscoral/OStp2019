@@ -166,19 +166,21 @@ void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, 
 }
 
 void aterrizar (int * IDReservaPista, int * cliente, ST_AVION * avion){
-        if (avion->id == IDReservaPista){
+        if (avion->id == *IDReservaPista){
 
         }
 }
 
-void recibirMensaje (int * IDReservaPista, ST_LISTAAVIONES ** lista, ST_LISTAAVIONES ** colaAterrizar, ST_COLA * colaDespegar , ST_AVION * avion, int cliente, char * buffer){
-            int bytesRecibidos = recv(cliente, buffer, tamanioBufferMensaje, 0);
-            /*if (bytesRecibidos <= 0) {
+void recibirMensaje (ST_TODASLASLISTAS * todasLasListas){
+        while (1){
+            ST_AVION * avion = (ST_AVION*)malloc(sizeof(ST_AVION));
+            char * bufferMensaje = (char*)malloc(tamanioBufferMensaje);
+            int bytesRecibidos = recv(todasLasListas->cliente, bufferMensaje, tamanioBufferMensaje, 0);
+            if (bytesRecibidos <= 0) {
                 perror("El chabón se desconectó o bla.");
                 }
-                 return 1;*/
-            printf("Mensaje: %s \n", buffer);
-            strtok(buffer, ";");
+            printf("Mensaje: %s \n", bufferMensaje);
+            strtok(bufferMensaje, ";");
             strtok(NULL, ";");
             strtok(NULL, ";");
             char id [longID];
@@ -189,6 +191,7 @@ void recibirMensaje (int * IDReservaPista, ST_LISTAAVIONES ** lista, ST_LISTAAVI
             int Opcion = atoi (&opcion);
             switch (Opcion){
                 case 1:
+                avion->cliente = todasLasListas->cliente;
                 strcpy(avion->modelo,strtok(NULL, ";"));
                 strcpy(&avion->estado,strtok(NULL, ";"));
                 char cantMaxComb [longCantComb];
@@ -198,24 +201,27 @@ void recibirMensaje (int * IDReservaPista, ST_LISTAAVIONES ** lista, ST_LISTAAVI
                 strcpy(cantComb,strtok(NULL, ";"));
                 avion->cantCombustible = atoi (cantComb);
                 registrarAvion(avion);
-                insertarOrdenado(lista,*avion);
-                mostrarLista(lista);
-                enviarMensaje(cliente, 0);
+                insertarOrdenado(&todasLasListas->avionesRegistrados,*avion);
+                mostrarLista(&todasLasListas->avionesRegistrados);
+                enviarMensaje(avion->cliente, 0);
+                free(bufferMensaje);
                 break;
                 case 2:
                 system ("clear");
-                ST_LISTAAVIONES * pAux = buscarIDEnLista(avion->id,lista);
+                ST_LISTAAVIONES * pAux = buscarIDEnLista(avion->id,&todasLasListas->avionesRegistrados);
                 *avion = pAux->avion;
-                solicitarPista(colaAterrizar, colaDespegar, avion);
-                enviarMensaje(cliente, 0);
+                solicitarPista(&todasLasListas->listaAterrizaje, todasLasListas->colaDespegue, avion);
+                enviarMensaje(avion->cliente, 0);
                 printf("\n Se copia el aviòn en una cola de espera para aterrizar u otra para despegar \n");
-                break;
-                case 3:
+                free(bufferMensaje);
+                free(avion);
+                /*case 3:
 
                 printf ("\n Se envìa la orden para despegar\n");
                 break;
                 case 4:
 
-                break;
+                break;*/
             }
+        }
     }

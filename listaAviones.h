@@ -13,6 +13,14 @@ typedef struct {
     ST_LISTAAVIONES *fin;
 }ST_COLA;
 
+typedef struct {
+    ST_LISTAAVIONES * avionesRegistrados;
+    ST_LISTAAVIONES * listaAterrizaje;
+    ST_COLA * colaDespegue;
+    int cliente;
+    int reservapista;
+} ST_TODASLASLISTAS;
+
 void crearCola(ST_COLA * cola);
 
 void agregarACola (ST_COLA * cola, ST_AVION * avion);
@@ -33,6 +41,6 @@ void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion);
 
 void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, ST_AVION * avion);
 
-void recibirMensaje (int * IDReservaPista, ST_LISTAAVIONES ** lista, ST_LISTAAVIONES ** colaAterrizar,ST_COLA * colaDespegar , ST_AVION * avion, int cliente, char * buffer);
+void recibirMensaje (ST_TODASLASLISTAS * todasLasListas);
 
 #endif // LISTAAVIONES_H_INCLUDED

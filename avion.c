@@ -123,25 +123,30 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
                 switch (opcion){
                     case 1:
                     if (aux==0){
-                    printf ("\n El avion se registrò correctamente\n");
-                        if (avion->estado=='h'){
-                            avion->estado = 'g';
+                        printf ("\n El avion se registrò correctamente\n");
+                            if (avion->estado=='h'){
+                                avion->estado = 'g';
+                            }
                         }
-                    }
                     break;
                     case 2:
                     if (aux==0){
-                    printf ("\n Se realizò correctamente la solicitud de pista\n");
+                        printf ("\n Se realizò correctamente la solicitud de pista\n");
+                    }
+                    if (aux==1){
+                        printf("\n Se asignò la pista a este avion. Por favor indique al piloto la acciòn a realizar.\n");
+                        *pistaAsignada = 1;
                     }
                     break;
                     case 3:
                     if (aux==0){
-                    printf ("\n La operacion se relizo exitosamente\n");
+                        printf ("\n La operacion se relizo exitosamente\n");
                     }
-                    break;
-                    case 4:
-                    if (aux==0){
-                    printf ("\n La operacion se relizo exitosamente\n");
+                    if (aux==3){
+                        printf ("\n El avion despegò satisfactoriamente\n");
+                    }
+                    if (aux==4){
+                        printf ("\n El avion aterrizo satisfactoriamente\n");
                     }
                     break;
                 }

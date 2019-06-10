@@ -3,6 +3,7 @@
 
 
 typedef struct {
+    int cliente;
     int id;
     char modelo [20];
     int capMax;

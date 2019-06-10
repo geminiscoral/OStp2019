@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "aviones.h"
+#define longMensajeEnviado 2
 
 
 
@@ -44,10 +45,16 @@
     void enviarMensaje (int cliente, int opcion){
             switch(opcion){
                 case 0: // La solicitud se proceso exitosamente
-                    send(cliente, "0", 2, 0);
+                    send(cliente, "0", longMensajeEnviado, 0);
                 break;
                 case 1: // La pista fue cedida a cliente
-                    send(cliente, "1", 2, 0);
+                    send(cliente, "1", longMensajeEnviado, 0);
+                break;
+                case 3: // El avion despego
+                    send(cliente, "3", longMensajeEnviado, 0);
+                break;
+                case 4: // El avion aterrizo
+                    send(cliente, "4", longMensajeEnviado, 0);
                 break;
             }
     }

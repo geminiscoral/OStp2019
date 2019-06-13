@@ -27,7 +27,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="consola.h" />
-		<Unit filename="main.c">
+		<Unit filename="mainAvion.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

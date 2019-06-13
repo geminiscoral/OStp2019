@@ -14,6 +14,9 @@
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add library="pthread" />
+				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
@@ -23,11 +26,26 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="aviones.h" />
+		<Unit filename="gestionCombustible.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gestionCombustible.h" />
+		<Unit filename="gestionCombustibleAterrizando.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gestionCombustibleAterrizando.h" />
+		<Unit filename="gestionPista.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gestionPista.h" />
 		<Unit filename="listaAviones.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="listaAviones.h" />
 		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="restarCombustible.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

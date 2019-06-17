@@ -19,7 +19,7 @@ combierte una cifra entera en un char
 
 /********************************************!
 *@fn  * enteroACadena
-combierte un nuemero en una cadena
+combierte un valor entero en una cadena
 *@param int valor
 *@param char *cadena
 *@return cadena
@@ -62,6 +62,8 @@ combierte un nuemero en una cadena
 
 /********************************************!
 *@fn  enviarMensaje
+**Segun la opcion ingresada por teclado, la fn envia un mensaje
+**a un cliente que se pasara por parametro.
 *@param int cliente
 *@param int opcion
 ********************************************/

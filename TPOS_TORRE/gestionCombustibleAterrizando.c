@@ -12,6 +12,9 @@
 
 /********************************************!
 *@fn  gestionarCombustibleAterrizando
+**Esta fn busca todos los aviones que se encuentren en estado
+**aterrizando (utiliza la lista de aterrizando) para utilizar la
+** la fn restaCombustible. Ademas duerme el proceso 5 seg
 *@param c1 ST_TODASLASLISTAS *todasLasListas
 ********************************************/
 void gestionarCombustibleAterrizando(ST_TODASLASLISTAS *todasLasListas){

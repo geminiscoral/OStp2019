@@ -10,9 +10,9 @@
 #define tamanioBufferMensaje 100
 
 
-
 /********************************************!
 *@fn  recibirMensajeAterrizajeYDespegue
+**
 *@param int cliente
 ********************************************/
 void recibirMensajeAterrizajeYDespegue (int cliente){
@@ -45,15 +45,14 @@ void recibirMensajeAterrizajeYDespegue (int cliente){
         }
 
 
-
 /********************************************!
 *@fn  aunarListas
-*@param c1 ST_TODASLASLISTAS * todasLasListas
-*@param c2 int * cliente
-*@param c3 int * IDReservaPista
-*@param c4 ST_LISTAAVIONES * avionesRegistrados
-*@param c5 ST_LISTAAVIONES * listaAterrizaje
-*@param c6 ST_COLA * colaDespegue
+*@param c1 {ST_TODASLASLISTAS} * todasLasListas
+*@param c2 {int} * cliente
+*@param c3 {int} * IDReservaPista
+*@param c4 {ST_LISTAAVIONES} * avionesRegistrados
+*@param c5 {ST_LISTAAVIONES} * listaAterrizaje
+*@param c6 {ST_COLA} * colaDespegue
 ********************************************/
 void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue){
         todasLasListas->avionesRegistrados = avionesRegistrados;
@@ -66,6 +65,9 @@ void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDRes
 
 /********************************************!
 *@fn  despegueAvion
+**utilizando la fn sleep, dormiremos el proceso 25 segundos, simulando
+**el despegue del avion, una vez finalizado, mandaremos un mensaje al usuario
+** indicandole que el avion quedo en vuelo.
 *@param c1 int ID
 ********************************************/
 void despegueAvion (int ID){
@@ -77,6 +79,9 @@ void despegueAvion (int ID){
 
 /********************************************!
 *@fn  aterrizajeAvion
+**utilizando la funcion sleep, dormiremos el proceso 25 segundos, simulando
+**el proceso de aterrizaje del avion, una vez finalizado, mandaremos un mensaje al usuario
+** indicandole que el avion aterrizo.
 *@param c1 int ID
 ********************************************/
 void aterrizajeAvion (int ID){
@@ -85,8 +90,11 @@ void aterrizajeAvion (int ID){
         printf("Avion %i en hangar ✈ \n", ID);
 }
 
+
 /********************************************!
 *@fn gestionarPista
+**Los aviones pueden solicitar pista para aterrizar.
+**Ademas gestinara el avance de la cola de espera de los aviones que esteen por despegar.
 *@param c1 ST_TODASLASLISTAS * todasLasListas
 ********************************************/
 void gestionarPista (ST_TODASLASLISTAS * todasLasListas){
@@ -111,3 +119,5 @@ void gestionarPista (ST_TODASLASLISTAS * todasLasListas){
         }
     }
 }
+
+

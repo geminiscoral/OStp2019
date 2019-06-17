@@ -7,23 +7,16 @@
 #define longComb 10
 #define tamanioMaxLinea 50
 #define tamanioBufferMensaje 100
+#define longMensajeRecibido 2
 
-/*******************************!
-*@fn strtoi es una funcion que transaforma un valor entero en char
-*@param un argunmento entero
-*@return un char
-********************************/
+
    char strtoi (int N){
         char salida;
         salida = N + 48;
         return salida;
     }
 
-/*******************************!
-*@fn enteroACadena es una funcion que transaforma un valor entero a cadena
-*@param un argunmento entero y un puntero char
-*@return la cadena
-********************************/
+
     char * enteroACadena (int valor, char * cadena){
         int cont = 0;
         char cad [10];
@@ -45,13 +38,7 @@
         strcpy(cadena,cad);
         return cadena;
     }
-/*******************************!
-*@fn armarMensaje
-*@param c1 argunmento entero
-*@param c2 dos puntero char
-*@struct ST_AVION * avion
-*@return bufferMensaje
-********************************/
+
     char* armarMensaje(int cliente, char * IP, char * puerto, ST_AVION * avion, int charOpcion){
         char * bufferMensaje = (char*)malloc(tamanioBufferMensaje);
         memset(bufferMensaje, '\0', tamanioBufferMensaje);
@@ -88,27 +75,14 @@
         return bufferMensaje;
 
     }
-/*******************************!
-*@fn parsearLinea del tipo  void
-*@file c1 puntero a un archivo
-*@param c2 puntero del tipo char
-********************************/
+
     void parsearLinea (FILE* pArchivo, char * variable){
         char lineaArchivo [tamanioMaxLinea];
         fgets(lineaArchivo, sizeof(lineaArchivo), pArchivo);
         strtok (lineaArchivo, ":");
         strcpy(variable, strtok (NULL, ";"));
     }
-/*******************************!
-*@fn parsearTextoParametro
-*@param c1 puntero constante char
-*@param c2 puntero char
-*@param c3 puntero char
-*@param c4 puntero int
-*@param c5 puntero char
-*@param c6 puntero char
-*@param c7 puntero int
-********************************/
+
 void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int * puerto, char * ID, char * modelo, int * cantMaxComb ){
     FILE * pArchivo = fopen(argv1, "r+");
     parsearLinea(pArchivo, IP);
@@ -121,10 +95,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
     *cantMaxComb = atoi(cantMaxCombust);
     fclose (pArchivo);
 }
-/*******************************!
-*@fn ingresarEstado
-*@struct ST_AVION * avion
-********************************/
+
     void ingresarEstado (ST_AVION * avion){
         scanf("%c", &avion->estado);
         if ((avion->estado!='h')&&(avion->estado!='v')){
@@ -132,69 +103,61 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
             ingresarEstado(avion);
         }
     }
-/*******************************!
-*@fn crearAvion
-*@struct ST_AVION * avion
-********************************/
+
     void crearAvion (ST_AVION * avion){
         printf("\n Ingrese el estado actual en el que se encuentra el avion ('h' para 'En Hangar' y 'v' para 'En Vuelo') \n");
         ingresarEstado(avion);
         printf("Ingrese la cantidad de combustible del avion \n");
         scanf("%i", &avion->cantCombustible);
     }
-/*******************************!
-*@fn recibirMensaje
-*@param c1 int cliente
-*@param c2 puntero char
-*@param c3 puntero char
-*@struct ST_AVION * avion
-*@param c4 int opcion
-*@param c5 puntero char
-*@return 1 si recibio el mensaje
-*@return error
-********************************/
-    int recibirMensaje (int cliente, char * IP, char * puerto, ST_AVION * avion, int opcion, char * buffer){
-                int bytesRecibidos = recv(cliente, buffer, sizeof(buffer), 0);
+
+    int recibirMensaje (int cliente, int opcion, ST_AVION * avion, int * pistaAsignada){
+                char * bufferRecibido = (char*)malloc(longMensajeRecibido);
+                int bytesRecibidos = recv(cliente, bufferRecibido, sizeof(bufferRecibido), 0);
                 if (bytesRecibidos <= 0) {
                     perror("El chabón se desconectó o bla.");
+                    return 1;
                     }
-                     return 1;
-                int intAux;
-                char aux;
-                strcpy (&aux, strtok(buffer,";"));
-                intAux = atoi(aux);
-                if (cliente != intAux){
-                    perror("El cliente no coincide.");
-                }
-                if (strcmp(strtok (NULL,";"),IP)!=0){
-                    perror("La direccion IP no coincide.");
-                }
-                if (strcmp(strtok (NULL,";"),puerto)!=0){
-                    perror("El puerto no coincide.");
-                }
-                if (strcmp(strtok (NULL,";"),avion->id)!=0){
-                    perror("El ID del avion no coincide.");
-                }
-                strcpy(&aux,strtok(NULL,";"));
-                intAux = atoi(&aux);
-                switch (intAux){
+                int aux;
+                aux = atoi(bufferRecibido);
+                switch (opcion){
                     case 1:
-                    strcmp(strtok(NULL,";"),"0");
-                    printf("El avion se registro correctamente.\n");
+                    if (aux==0){
+                        printf ("\n El avion se registrò correctamente\n");
+                            if (avion->estado=='h'){
+                                avion->estado = 'g';
+                            }
+                        }
                     break;
                     case 2:
+                    if (aux==0){
+                        printf ("\n Se realizò correctamente la solicitud de pista\n");
+                    }
+                    if (aux==1){
+                        printf("\n Se asignò la pista a este avion. Por favor indique al piloto la acciòn a realizar.\n");
+                        *pistaAsignada = 1;
+                    }
                     break;
                     case 3:
-                    break;
-                    case 4:
+                    if (aux==0){
+                        printf ("\n La operacion se relizo exitosamente\n");
+                    }
+                    if (aux==3){
+                        printf ("\n El avion despegò satisfactoriamente\n");
+                        avion->estado = 'v';
+                        *pistaAsignada = 0;
+                    }
+                    if (aux==4){
+                        printf ("\n El avion aterrizo satisfactoriamente\n");
+                        avion->estado = 'g';
+                        *pistaAsignada = 0;
+                    }
                     break;
                 }
+                free(bufferRecibido);
         }
 
-/*******************************!
-*@fn mostrarEstadoAvion
-*@struct ST_AVION * avion
-********************************/
+
 void mostrarEstadoAvion (ST_AVION *avion){
     printf("\n Estados: 'h' = 'En Hangar'; 'a' = 'Aterrizando'; 'e' = 'Espera/Aterrizar'; 'v' = 'En Vuelo'; 'd' = 'Despegando'; 'g' = 'Listo/Hangar'; 'l' = 'Listo/Despegar' \n");
     printf("\nEl ID del avion es %s\n", avion->id);

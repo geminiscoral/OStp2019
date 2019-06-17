@@ -10,6 +10,7 @@
 
 /********************************************!
 *@fn conectar
+**se realiza coneccion del avión con el aeropuerto
 *@param int cliente
 *@param struct sockaddr_in direccionServidor
 *@return 1
@@ -26,6 +27,7 @@ int conectar (int cliente, struct sockaddr_in direccionServidor){
 
 /********************************************!
 *@fn abrirConsola
+**abre un menú de opciones, muestra las característica del avión actual
 *@param struct sockaddr_in direccionServidor
 *@param int cliente
 *@param char * IP
@@ -92,5 +94,6 @@ void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, 
         break;
     }
 }
+
 
 

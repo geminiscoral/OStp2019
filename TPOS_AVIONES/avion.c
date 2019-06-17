@@ -13,7 +13,7 @@
 
 /********************************************!
 *@fn  strtoi
-combierte una cifra entera en un char
+convierte una cifra entera en un char
 *@param int N
 *@return una variable char
 ********************************************/
@@ -24,11 +24,9 @@ combierte una cifra entera en un char
     }
 
 
-
-
 /********************************************!
 *@fn  * enteroACadena
-combierte un nuemero en una cadena
+convierte un número en una cadena
 *@param int valor
 *@param char *cadena
 *@return cadena
@@ -60,6 +58,7 @@ combierte un nuemero en una cadena
 
 /********************************************!
 *@fn  * armarMensaje
+**EN esta función concatenamos (armaremos) una sola cadena con todos los datos.
 *@param c1 int cliente
 *@param c2 char *IP
 *@param c3 char * puerto
@@ -110,9 +109,9 @@ combierte un nuemero en una cadena
 
 /********************************************!
 *@fn  parsearLinea
+**parsear la línea
 *@param c1 FILE* pArchivo
 *@param c2 char * variable
-
 ********************************************/
     void parsearLinea (FILE* pArchivo, char * variable){
         char lineaArchivo [tamanioMaxLinea];
@@ -122,10 +121,9 @@ combierte un nuemero en una cadena
     }
 
 
-
-
 /********************************************!
 *@fn  parsearTextoParametro
+**parsea el texto
 *@param c1 const char * argv1
 *@param c2 char * IP
 *@param c3 char* strPuerto
@@ -152,6 +150,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
 
 /********************************************!
 *@fn  ingresarEstado
+**función que toma el valor por teclado, y modifica el estado del avión.
 *@param c1 ST_AVION* avion
 ********************************************/
     void ingresarEstado (ST_AVION * avion){
@@ -167,6 +166,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
 
 /********************************************!
 *@fn  crearAvion
+**función que crea un avion
 *@param c1 ST_AVION * avion
 ********************************************/
     void crearAvion (ST_AVION * avion){
@@ -181,6 +181,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
 
 /********************************************!
 *@fn  recibirMensaje
+**función que recibe la opción por consola y determina la acción siguiente.
 *@param c1 int cliente
 *@param c2 int opcion
 *@param c3 ST_AVION * avion
@@ -233,6 +234,8 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
 
 /********************************************!
 *@fn  mostrarEstadoAvion
+**muestra las caracteristicas del avion actual
+**muestra, id, estado y cantidad de combustible
 *@param c1 ST_AVION *avion
 ********************************************/
 void mostrarEstadoAvion (ST_AVION *avion){
@@ -242,4 +245,5 @@ void mostrarEstadoAvion (ST_AVION *avion){
     printf("\nLa cantidad de combustible del avion es %i\n", avion->cantCombustible);
 
 }
+
 

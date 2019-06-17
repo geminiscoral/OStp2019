@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1560801909 source:/home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/avion.c
+	"avion.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+
+1560803394 /home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/avion.h
+
+1560506742 source:/home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/mainAvion.c
+	<stdlib.h>
+	<stdio.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	"consola.h"
+	"avion.h"
+
+1560801298 /home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/consola.h
+	"avion.h"
+	<arpa/inet.h>
+	<sys/socket.h>
+
+1560802328 source:/home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/consola.c
+	"consola.h"
+	"avion.h"
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+

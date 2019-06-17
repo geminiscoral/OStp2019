@@ -8,6 +8,7 @@
 #include "listaAviones.h"
 #include "gestionCombustibleAterrizando.h"
 
+<<<<<<< HEAD
 
 /*******************************!
 *@fn restarCombustible
@@ -18,5 +19,11 @@ void restarCombustible(ST_TODASLASLISTAS *ListasAviones){
     int combustibleActual= ListasAviones->listaAterrizaje->avion.cantCombustible;
     combustibleActual=(combustibleActual-2);
     ListasAviones->listaAterrizaje->avion.cantCombustible=combustibleActual;
+=======
+void restarCombustible(ST_LISTAAVIONES *subLista){
+    int combustibleActual= subLista->avion.cantCombustible;
+    combustibleActual=(combustibleActual-2);
+    subLista->avion.cantCombustible=combustibleActual;
+>>>>>>> my_branch_psang
     return;
 }

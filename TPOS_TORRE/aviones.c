@@ -5,6 +5,7 @@
 #include "aviones.h"
 #define longMensajeEnviado 2
 
+<<<<<<< HEAD
 /********************************************!
 *@fn  strtoi
 combierte una cifra entera en un char
@@ -12,12 +13,15 @@ combierte una cifra entera en un char
 *@return una variable char
 ********************************************/
 
+=======
+>>>>>>> my_branch_psang
    char strtoi (int N){
         char salida;
         salida = N + 48;
         return salida;
     }
 
+<<<<<<< HEAD
 
 /********************************************!
 *@fn  * enteroACadena
@@ -27,6 +31,8 @@ combierte un valor entero en una cadena
 *@return cadena
 ********************************************/
 
+=======
+>>>>>>> my_branch_psang
     char * enteroACadena (int valor, char * cadena){
         int cont = 0;
         char cad [10];
@@ -49,6 +55,7 @@ combierte un valor entero en una cadena
         return cadena;
     }
 
+<<<<<<< HEAD
 
 
 /********************************************!
@@ -58,12 +65,15 @@ combierte un valor entero en una cadena
 *@param ST_AVION *avion
 ********************************************/
 
+=======
+>>>>>>> my_branch_psang
     void registrarAvion (ST_AVION * avion){
             if (avion->estado == 'h'){
                     avion->estado = 'g';
             }
     }
 
+<<<<<<< HEAD
 
 
 /********************************************!
@@ -74,6 +84,8 @@ combierte un valor entero en una cadena
 *@param int opcion
 ********************************************/
 
+=======
+>>>>>>> my_branch_psang
     void enviarMensaje (int cliente, int opcion){
             switch(opcion){
                 case 0: // La solicitud se proceso exitosamente

@@ -94,6 +94,7 @@
 	"aviones.h"
 	"listaAviones.h"
 
+<<<<<<< HEAD
 1560384547 source:/home/geminis2/Escritorio/TPOS(comentada)/tpos/TPOS_TORRE/main.c
 	<stdlib.h>
 	<stdio.h>
@@ -117,12 +118,25 @@
 	"listaAviones.h"
 
 1560478795 /home/geminis2/Escritorio/TPOS(comentada)/tpos/TPOS_TORRE/gestionCombustibleAterrizando.h
+=======
+1560400124 source:/home/user1/TPOS/TPOS_TORRE/aviones.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+	"aviones.h"
+
+1560366183 /home/user1/TPOS/TPOS_TORRE/aviones.h
+
+1560366183 source:/home/user1/TPOS/TPOS_TORRE/gestionPista.c
+>>>>>>> my_branch_psang
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
 	<arpa/inet.h>
 	<sys/socket.h>
 	<string.h>
+<<<<<<< HEAD
 	<pthread.h>
 	"aviones.h"
 	"listaAviones.h"
@@ -175,6 +189,26 @@
 	"listaAviones.h"
 
 1560470832 source:/home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/gestionCombustibleAterrizando.c
+=======
+	"gestionPista.h"
+
+1560366183 /home/user1/TPOS/TPOS_TORRE/gestionPista.h
+	"listaAviones.h"
+
+1560366183 /home/user1/TPOS/TPOS_TORRE/listaAviones.h
+	"aviones.h"
+
+1560366183 source:/home/user1/TPOS/TPOS_TORRE/listaAviones.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	"listaAviones.h"
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+
+1560399053 source:/home/user1/TPOS/TPOS_TORRE/gestionCombustibleAterrizando.c
+>>>>>>> my_branch_psang
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -187,7 +221,11 @@
 	"listaAviones.h"
 	"gestionCombustibleAterrizando.h"
 
+<<<<<<< HEAD
 1560492823 /home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/gestionCombustibleAterrizando.h
+=======
+1560400258 /home/user1/TPOS/TPOS_TORRE/gestionCombustibleAterrizando.h
+>>>>>>> my_branch_psang
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -198,6 +236,7 @@
 	"aviones.h"
 	"listaAviones.h"
 
+<<<<<<< HEAD
 1560472431 source:/home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/gestionPista.c
 	<stdlib.h>
 	<stdio.h>
@@ -220,6 +259,9 @@
 	<string.h>
 
 1560384547 source:/home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/main.c
+=======
+1560398455 source:/home/user1/TPOS/TPOS_TORRE/main.c
+>>>>>>> my_branch_psang
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -233,6 +275,7 @@
 	"gestionCombustibleAterrizando.h"
 	"gestionCombustible.h"
 
+<<<<<<< HEAD
 1560400396 source:/home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/restarCombustible.c
 	<stdlib.h>
 	<stdio.h>
@@ -271,6 +314,9 @@
 	"aviones.h"
 
 1560812028 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustible.h
+=======
+1560400258 /home/user1/TPOS/TPOS_TORRE/gestionCombustible.h
+>>>>>>> my_branch_psang
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -281,7 +327,11 @@
 	"aviones.h"
 	"listaAviones.h"
 
+<<<<<<< HEAD
 1560812028 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustibleAterrizando.c
+=======
+1560386654 source:/home/user1/TPOS/TPOS_TORRE/restarCombustible.c
+>>>>>>> my_branch_psang
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -289,6 +339,7 @@
 	<sys/socket.h>
 	<string.h>
 	<pthread.h>
+<<<<<<< HEAD
 	<unistd.h>
 	"aviones.h"
 	"listaAviones.h"
@@ -327,6 +378,12 @@
 	<string.h>
 
 1560813246 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/main.c
+=======
+	"listaAviones.h"
+	"gestionCombustibleAterrizando.h"
+
+1560399052 source:/home/user1/TPOS/TPOS_TORRE/gestionCombustible.c
+>>>>>>> my_branch_psang
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -334,6 +391,7 @@
 	<sys/socket.h>
 	<string.h>
 	<pthread.h>
+<<<<<<< HEAD
 	"aviones.h"
 	"listaAviones.h"
 	"gestionPista.h"
@@ -351,3 +409,10 @@
 	"listaAviones.h"
 	"gestionCombustibleAterrizando.h"
 
+=======
+	<unistd.h>
+	"aviones.h"
+	"listaAviones.h"
+	"gestionCombustible.h"
+
+>>>>>>> my_branch_psang

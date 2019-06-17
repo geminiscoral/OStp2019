@@ -6,6 +6,7 @@
 #define tamanioBufferMensaje 100
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -18,6 +19,8 @@
 *@return 1
 ********************************************/
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang
 int conectar (int cliente, struct sockaddr_in direccionServidor){
         if (connect(cliente, (void*) &direccionServidor, sizeof(direccionServidor)) != 0) {
                 perror("No se pudo conectar");
@@ -26,6 +29,7 @@ int conectar (int cliente, struct sockaddr_in direccionServidor){
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -41,6 +45,8 @@ int conectar (int cliente, struct sockaddr_in direccionServidor){
 *@param int * pistaAsignada
 ********************************************/
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang
 void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, char*puerto, ST_AVION *avion, int * pistaAsignada){
     printf("\n Bienvenido al sistema de control del avion\n");
     printf ("\nEl ID del avion es %s", avion->id);
@@ -73,6 +79,7 @@ void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, 
         char* msj2 = armarMensaje(cliente,IP,puerto, avion, 2);
         send(cliente, msj2, tamanioBufferMensaje, 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
         while (*pistaAsignada!=1){
             recibirMensaje(cliente, 2, avion, pistaAsignada);
             }
@@ -83,11 +90,17 @@ void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, 
         //recibirMensaje(cliente, 2, avion, pistaAsignada);
         abrirConsola(direccionServidor, cliente, IP, puerto, avion, pistaAsignada);
 >>>>>>> rama_geminis
+=======
+        recibirMensaje(cliente, 2, avion, pistaAsignada);
+        //recibirMensaje(cliente, 2, avion, pistaAsignada);
+        abrirConsola(direccionServidor, cliente, IP, puerto, avion, pistaAsignada);
+>>>>>>> my_branch_psang
         break;
         case 3:
         system("clear");
         char* msj3 = armarMensaje(cliente,IP,puerto, avion, 3);
         send(cliente, msj3, tamanioBufferMensaje, 0);
+<<<<<<< HEAD
 <<<<<<< HEAD
         while(avion->estado!='v'){
             recibirMensaje(cliente, 3, avion, pistaAsignada);
@@ -96,6 +109,10 @@ void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, 
         recibirMensaje(cliente, 3, avion, pistaAsignada);
 
 >>>>>>> rama_geminis
+=======
+        recibirMensaje(cliente, 3, avion, pistaAsignada);
+
+>>>>>>> my_branch_psang
         abrirConsola(direccionServidor, cliente, IP, puerto, avion, pistaAsignada);
         break;
         case 4:
@@ -104,6 +121,7 @@ void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, 
         char* msj4 = armarMensaje(cliente,IP,puerto, avion, 4);
         send(cliente, msj4, tamanioBufferMensaje, 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
         while(avion->estado!='g'){
             recibirMensaje(cliente, 3, avion, pistaAsignada);
             }
@@ -111,6 +129,10 @@ void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, 
         recibirMensaje(cliente, 3, avion, pistaAsignada);
 
 >>>>>>> rama_geminis
+=======
+        recibirMensaje(cliente, 3, avion, pistaAsignada);
+
+>>>>>>> my_branch_psang
         abrirConsola(direccionServidor, cliente, IP, puerto, avion, pistaAsignada);
         break;
         case 5:
@@ -123,6 +145,9 @@ void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang

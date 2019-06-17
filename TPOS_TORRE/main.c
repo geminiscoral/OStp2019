@@ -8,12 +8,18 @@
 #include "aviones.h"
 #include "listaAviones.h"
 #include "gestionPista.h"
+<<<<<<< HEAD
 
+=======
+>>>>>>> my_branch_psang
 #include "gestionCombustibleAterrizando.h"
 #include "gestionCombustible.h"
 #define tamanioBufferMensaje 100
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> my_branch_psang
 int main(void) {
 
     struct sockaddr_in direccionServidor;
@@ -34,8 +40,11 @@ int main(void) {
     printf("Estoy escuchando\n");
     listen(servidor, 100);
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> my_branch_psang
     //------------------------------
 
 	ST_LISTAAVIONES * listaAvion;
@@ -52,6 +61,7 @@ int main(void) {
     aunarListas(&todasLasListas,&cliente, &IDReservaPista, listaAvion, colaAterrizar, &colaDespegar);
 
     pthread_t gestionPista;
+<<<<<<< HEAD
 
     pthread_create(&gestionPista, NULL, (void*)gestionarPista, (void*)&todasLasListas);
 
@@ -64,6 +74,16 @@ int main(void) {
     pthread_create(&gestionCombustibleAterrizando, NULL, (void*)gestionarCombustibleAterrizando, (void*)&todasLasListas);
 
 
+=======
+    pthread_create(&gestionPista, NULL, (void*)gestionarPista, (void*)&todasLasListas);
+
+    pthread_t gestionCombustible;
+    pthread_create(&gestionCombustible, NULL, (void*)gestionarCombustibleRegistrados, (void*)&todasLasListas);
+
+    pthread_t gestionCombustibleAterrizando;
+    pthread_create(&gestionCombustibleAterrizando, NULL, (void*)gestionarCombustibleAterrizando, (void*)&todasLasListas);
+
+>>>>>>> my_branch_psang
     while (1){
 
         struct sockaddr_in direccionCliente;
@@ -76,7 +96,10 @@ int main(void) {
 
         pthread_create(&gestionClientes, NULL,(void*)recibirMensaje, (void*)&todasLasListas);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> my_branch_psang
         printf("Recibí una conexión en %d!!\n", cliente);
 
         //recibirMensaje(&todasLasListas);

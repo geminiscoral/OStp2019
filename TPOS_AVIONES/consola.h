@@ -6,6 +6,7 @@
 #include <sys/socket.h>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, char*puerto, ST_AVION *avion, int * pistaAsignada);
 
 =======
@@ -33,4 +34,8 @@ void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, 
 /*int conectar (int cliente, struct sockaddr_in direccionServidor){*/
 
 >>>>>>> rama_geminis
+=======
+void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, char*puerto, ST_AVION *avion, int * pistaAsignada);
+
+>>>>>>> my_branch_psang
 #endif // CONSOLA_H_INCLUDED

@@ -9,6 +9,7 @@
 #define tamanioBufferMensaje 100
 #define longCantComb 10
 
+<<<<<<< HEAD
 
 //1
 /********************************************!
@@ -17,10 +18,13 @@
 *@param c1 ST_LISTAAVIONES**cabecera
 *******************************************/
 
+=======
+>>>>>>> my_branch_psang
 void crearLista (ST_LISTAAVIONES**cabecera){
         *cabecera = NULL;
 }
 
+<<<<<<< HEAD
 
 //2
 /********************************************!
@@ -30,6 +34,8 @@ void crearLista (ST_LISTAAVIONES**cabecera){
 *@return nodo
 ********************************************/
 
+=======
+>>>>>>> my_branch_psang
 ST_LISTAAVIONES * crearNodo (ST_AVION * avion) {
         ST_LISTAAVIONES * nodo = (ST_LISTAAVIONES*)malloc(sizeof(ST_LISTAAVIONES));
         nodo->avion = *avion;
@@ -37,6 +43,7 @@ ST_LISTAAVIONES * crearNodo (ST_AVION * avion) {
         return nodo;
 }
 
+<<<<<<< HEAD
 
 //3
 /********************************************!
@@ -44,11 +51,14 @@ ST_LISTAAVIONES * crearNodo (ST_AVION * avion) {
 ** crea cola
 *@param ST_COLA *cola
 ********************************************/
+=======
+>>>>>>> my_branch_psang
 void crearCola(ST_COLA * cola){
     cola->cabecera = NULL;
     cola->fin = NULL;
 }
 
+<<<<<<< HEAD
 
 //4
 /********************************************!
@@ -57,6 +67,8 @@ void crearCola(ST_COLA * cola){
 *@param ST_COLA *cola
 *@param ST_AVION *avion
 ********************************************/
+=======
+>>>>>>> my_branch_psang
 void agregarACola (ST_COLA * cola, ST_AVION * avion){
     ST_LISTAAVIONES * nodo = crearNodo(avion);
 
@@ -69,12 +81,15 @@ void agregarACola (ST_COLA * cola, ST_AVION * avion){
     cola->fin = nodo;
 }
 
+<<<<<<< HEAD
 //5
 /********************************************!
 *@fn ST_AVION eliminarDeCola
 *@param ST_COLA *cola
 *@return avion
 ********************************************/
+=======
+>>>>>>> my_branch_psang
 ST_AVION eliminarDeCola (ST_COLA * cola){
     ST_LISTAAVIONES * aux = cola->cabecera;
     ST_AVION avion = cola->cabecera->avion;
@@ -85,6 +100,7 @@ ST_AVION eliminarDeCola (ST_COLA * cola){
     return avion;
 }
 
+<<<<<<< HEAD
 //6
 /********************************************!
 *@fn insertarOrdenado
@@ -92,6 +108,8 @@ ST_AVION eliminarDeCola (ST_COLA * cola){
 *@param c1 ST_LISTAAVIONES**cabecera
 *@param c2 ST_AVION avion
 ********************************************/
+=======
+>>>>>>> my_branch_psang
 void insertarOrdenado (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
     //ST_LISTAAVIONES * busqueda = buscarIDEnLista(avion.id, cabecera);
     /*if (busqueda!=NULL){
@@ -118,12 +136,15 @@ void insertarOrdenado (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
     }
 }
 
+<<<<<<< HEAD
 //7
 /********************************************!
 *@fn mostrarLista
 **Muestra las caracteristicas del avion por pantalla
 *@param ST_LISTAAVIONES**cabecera
 ********************************************/
+=======
+>>>>>>> my_branch_psang
 void mostrarLista (ST_LISTAAVIONES**cabecera){
     ST_LISTAAVIONES * aux = *cabecera;
     if (aux!=NULL){
@@ -143,6 +164,7 @@ void mostrarLista (ST_LISTAAVIONES**cabecera){
     }
 }
 
+<<<<<<< HEAD
 //8
 /********************************************!
 *@fn ST_LISTAAVIONES * buscarIDEnLista
@@ -153,6 +175,8 @@ void mostrarLista (ST_LISTAAVIONES**cabecera){
 *@return Null si el avion no fue encontrado
 *@return axu la estructura del avion encontrado
 ********************************************/
+=======
+>>>>>>> my_branch_psang
 ST_LISTAAVIONES * buscarIDEnLista (int ID, ST_LISTAAVIONES ** cabecera){
     ST_LISTAAVIONES * aux = *cabecera;
     ST_LISTAAVIONES * ant = NULL;
@@ -168,6 +192,7 @@ ST_LISTAAVIONES * buscarIDEnLista (int ID, ST_LISTAAVIONES ** cabecera){
     return aux;
 }
 
+<<<<<<< HEAD
 
 //9
 /********************************************!
@@ -177,6 +202,8 @@ ST_LISTAAVIONES * buscarIDEnLista (int ID, ST_LISTAAVIONES ** cabecera){
 *@param c1 int ID
 *@param c2 ST_LISTAAVIONES ** cabecera
 ********************************************/
+=======
+>>>>>>> my_branch_psang
 void  eliminarDeLista (int ID, ST_LISTAAVIONES ** cabecera){
     ST_LISTAAVIONES * aux = *cabecera;
     ST_LISTAAVIONES * ant = NULL;
@@ -194,6 +221,7 @@ void  eliminarDeLista (int ID, ST_LISTAAVIONES ** cabecera){
         free(aux);
 }
 
+<<<<<<< HEAD
 //10
 /********************************************!
 *@fn ordenarPorCombustible
@@ -201,6 +229,8 @@ void  eliminarDeLista (int ID, ST_LISTAAVIONES ** cabecera){
 *@param c1 ST_LISTAAVIONES ** cabecera
 *@param c2 ST_AVION avion
 ********************************************/
+=======
+>>>>>>> my_branch_psang
 void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
     //ST_LISTAAVIONES * busqueda = buscarIDEnLista(avion.id, cabecera);
     /*if (busqueda!=NULL){
@@ -227,6 +257,7 @@ void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
     }
 }
 
+<<<<<<< HEAD
 //11
 /********************************************!
 *@fn solicitarPista
@@ -236,6 +267,9 @@ void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
 *@param c2 ST_COLA * colaDespegar
 *@param c3 ST_AVION * avion
 ********************************************/
+=======
+
+>>>>>>> my_branch_psang
 void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, ST_AVION * avion){
         if (avion->estado == 'v'){
             ordenarPorCombustible(listaAterrizar, *avion);
@@ -250,6 +284,7 @@ void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, 
         }
 }
 
+<<<<<<< HEAD
 //12
 /********************************************!
 *@fn aterrizar
@@ -258,17 +293,22 @@ void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, 
 *@param c2 int * cliente
 *@param c3 ST_AVION * avion
 ********************************************/
+=======
+>>>>>>> my_branch_psang
 void aterrizar (int * IDReservaPista, int * cliente, ST_AVION * avion){
         if (avion->id == *IDReservaPista){
 
         }
 }
 
+<<<<<<< HEAD
 //13
 /********************************************!
 *@fn recibirMensaje
 *@param c1 ST_TODASLASLISTAS * todasLasListas
 ********************************************/
+=======
+>>>>>>> my_branch_psang
 void recibirMensaje (ST_TODASLASLISTAS * todasLasListas){
         while (1){
             ST_AVION * avion = (ST_AVION*)malloc(sizeof(ST_AVION));
@@ -313,6 +353,7 @@ void recibirMensaje (ST_TODASLASLISTAS * todasLasListas){
                 printf("\n Se copia el aviòn en una cola de espera para aterrizar u otra para despegar \n");
                 free(bufferMensaje);
                 free(avion);
+<<<<<<< HEAD
                 break;
                 case 3:
                 todasLasListas->reservapista = avion->id;
@@ -328,6 +369,8 @@ void recibirMensaje (ST_TODASLASLISTAS * todasLasListas){
                 free(bufferMensaje);
                 free(avion);
                 break;
+=======
+>>>>>>> my_branch_psang
                 /*case 3:
 
                 printf ("\n Se envìa la orden para despegar\n");
@@ -335,7 +378,10 @@ void recibirMensaje (ST_TODASLASLISTAS * todasLasListas){
                 case 4:
 
                 break;*/
+<<<<<<< HEAD
 
+=======
+>>>>>>> my_branch_psang
             }
         }
     }

@@ -11,6 +11,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 /********************************************!
@@ -20,6 +21,8 @@ convierte una cifra entera en un char
 *@return una variable char
 ********************************************/
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang
    char strtoi (int N){
         char salida;
         salida = N + 48;
@@ -27,6 +30,7 @@ convierte una cifra entera en un char
     }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 /********************************************!
@@ -37,6 +41,8 @@ convierte un número en una cadena
 *@return cadena
 ********************************************/
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang
     char * enteroACadena (int valor, char * cadena){
         int cont = 0;
         char cad [10];
@@ -60,6 +66,7 @@ convierte un número en una cadena
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -76,6 +83,8 @@ convierte un número en una cadena
 *@return bufferMensaje
 ********************************************/
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang
     char* armarMensaje(int cliente, char * IP, char * puerto, ST_AVION * avion, int charOpcion){
         char * bufferMensaje = (char*)malloc(tamanioBufferMensaje);
         memset(bufferMensaje, '\0', tamanioBufferMensaje);
@@ -114,6 +123,7 @@ convierte un número en una cadena
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -125,6 +135,8 @@ convierte un número en una cadena
 *@param c2 char * variable
 ********************************************/
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang
     void parsearLinea (FILE* pArchivo, char * variable){
         char lineaArchivo [tamanioMaxLinea];
         fgets(lineaArchivo, sizeof(lineaArchivo), pArchivo);
@@ -132,6 +144,7 @@ convierte un número en una cadena
         strcpy(variable, strtok (NULL, ";"));
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -147,6 +160,8 @@ convierte un número en una cadena
 *@param c7 int * cantMaxComb
 ********************************************/
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang
 void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int * puerto, char * ID, char * modelo, int * cantMaxComb ){
     FILE * pArchivo = fopen(argv1, "r+");
     parsearLinea(pArchivo, IP);
@@ -161,6 +176,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -171,6 +187,8 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
 *@param c1 ST_AVION* avion
 ********************************************/
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang
     void ingresarEstado (ST_AVION * avion){
         scanf("%c", &avion->estado);
         if ((avion->estado!='h')&&(avion->estado!='v')){
@@ -179,6 +197,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
         }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -190,6 +209,8 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
 *@param c1 ST_AVION * avion
 ********************************************/
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang
     void crearAvion (ST_AVION * avion){
         printf("\n Ingrese el estado actual en el que se encuentra el avion ('h' para 'En Hangar' y 'v' para 'En Vuelo') \n");
         ingresarEstado(avion);
@@ -197,6 +218,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
         scanf("%i", &avion->cantCombustible);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -211,6 +233,8 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
 *@param c4 int * pistaAsignada
 ********************************************/
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang
     int recibirMensaje (int cliente, int opcion, ST_AVION * avion, int * pistaAsignada){
                 char * bufferRecibido = (char*)malloc(longMensajeRecibido);
                 int bytesRecibidos = recv(cliente, bufferRecibido, sizeof(bufferRecibido), 0);
@@ -245,6 +269,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
                     if (aux==3){
                         printf ("\n El avion despegò satisfactoriamente\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
                         avion->estado = 'v';
                         *pistaAsignada = 0;
                     }
@@ -257,6 +282,11 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
                     if (aux==4){
                         printf ("\n El avion aterrizo satisfactoriamente\n");
 >>>>>>> rama_geminis
+=======
+                    }
+                    if (aux==4){
+                        printf ("\n El avion aterrizo satisfactoriamente\n");
+>>>>>>> my_branch_psang
                     }
                     break;
                 }
@@ -264,6 +294,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
         }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -275,6 +306,8 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
 *@param c1 ST_AVION *avion
 ********************************************/
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang
 void mostrarEstadoAvion (ST_AVION *avion){
     printf("\n Estados: 'h' = 'En Hangar'; 'a' = 'Aterrizando'; 'e' = 'Espera/Aterrizar'; 'v' = 'En Vuelo'; 'd' = 'Despegando'; 'g' = 'Listo/Hangar'; 'l' = 'Listo/Despegar' \n");
     printf("\nEl ID del avion es %s\n", avion->id);
@@ -284,6 +317,9 @@ void mostrarEstadoAvion (ST_AVION *avion){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> rama_geminis
+=======
+>>>>>>> my_branch_psang

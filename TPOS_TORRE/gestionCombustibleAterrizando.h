@@ -10,6 +10,7 @@
 #include "aviones.h"
 #include "listaAviones.h"
 
+<<<<<<< HEAD
 /********************************************!
 ** TAD: gestionarCombustibleAterrizando
 **En este TAD gestionaremos el uso de combustible de
@@ -31,5 +32,9 @@ ST_TODASLASLISTAS
 void gestionarCombustibleAterrizando(ST_TODASLASLISTAS *todasLasListas);
 
 void restarCombustible(ST_TODASLASLISTAS *todasLasListas);
+=======
+void gestionarCombustibleAterrizando(ST_TODASLASLISTAS *todasLasListas);
+void restarCombustible(ST_LISTAAVIONES *subLista);
+>>>>>>> my_branch_psang
 
 #endif // GESTIONCOMBUSTIBLEATERRIZANDO_H_INCLUDED

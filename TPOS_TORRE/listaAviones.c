@@ -37,15 +37,6 @@ void agregarACola (ST_COLA * cola, ST_AVION * avion){
     cola->fin = nodo;
 }
 
-ST_AVION eliminarDeCola (ST_COLA * cola){
-    ST_LISTAAVIONES * aux = cola->cabecera;
-    ST_AVION avion = cola->cabecera->avion;
-
-    cola->cabecera = cola->cabecera->ste;
-    free(aux);
-
-    return avion;
-}
 
 void insertarOrdenado (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
     //ST_LISTAAVIONES * busqueda = buscarIDEnLista(avion.id, cabecera);
@@ -107,22 +98,6 @@ ST_LISTAAVIONES * buscarIDEnLista (int ID, ST_LISTAAVIONES ** cabecera){
     return aux;
 }
 
-void  eliminarDeLista (int ID, ST_LISTAAVIONES ** cabecera){
-    ST_LISTAAVIONES * aux = *cabecera;
-    ST_LISTAAVIONES * ant = NULL;
-
-    while ((*cabecera!=NULL) && (aux->ste!=NULL) && (ID>aux->avion.id)){
-        ant = aux;
-        aux = aux->ste;
-    }
-    if ((ID!=aux->avion.id)||(*cabecera==NULL)){
-        perror("\nElemento no encontrado\n");
-        return NULL;
-    }
-
-        ant->ste = aux->ste;
-        free(aux);
-}
 
 void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
     //ST_LISTAAVIONES * busqueda = buscarIDEnLista(avion.id, cabecera);
@@ -215,13 +190,21 @@ void recibirMensaje (ST_TODASLASLISTAS * todasLasListas){
                 printf("\n Se copia el aviòn en una cola de espera para aterrizar u otra para despegar \n");
                 free(bufferMensaje);
                 free(avion);
-                /*case 3:
-
-                printf ("\n Se envìa la orden para despegar\n");
+                break;
+                case 3:
+                todasLasListas->reservapista = avion->id;
+                printf ("\n Se recibiò la orden para despegar\n");
+                printf ("\n La pista està siendo utilizada por el avion ID: %i\n", avion->id);
+                free(bufferMensaje);
+                free(avion);
                 break;
                 case 4:
-
-                break;*/
+                todasLasListas->reservapista = avion->id;
+                printf ("\n Se recibiò la orden para aterrizar\n");
+                printf ("\n La pista està siendo utilizada por el avion ID: %i\n", avion->id);
+                free(bufferMensaje);
+                free(avion);
+                break;
             }
         }
     }

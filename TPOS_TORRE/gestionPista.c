@@ -9,34 +9,6 @@
 #define longID 9
 #define tamanioBufferMensaje 100
 
-void recibirMensajeAterrizajeYDespegue (int cliente){
-            ST_AVION * avion = (ST_AVION*)malloc(sizeof(ST_AVION));
-            char * bufferMensaje = (char*)malloc(tamanioBufferMensaje);
-            int bytesRecibidos = recv(cliente, bufferMensaje, tamanioBufferMensaje, 0);
-            if (bytesRecibidos <= 0) {
-                perror("El chabón se desconectó o bla.");
-                }
-            printf("Mensaje: %s \n", bufferMensaje);
-            strtok(bufferMensaje, ";");
-            strtok(NULL, ";");
-            strtok(NULL, ";");
-            char id [longID];
-            strcpy(id,strtok(NULL,";"));
-            avion->id = atoi(id);
-            char opcion;
-            strcpy(&opcion,strtok(NULL, ";"));
-            int Opcion = atoi (&opcion);
-            switch (Opcion){
-                case 3:
-                free(avion);
-                printf ("\n Se recibiò la orden para despegar\n");
-                break;
-                case 4:
-                free(avion);
-                printf ("\n Se recibiò la orden para aterrizar\n");
-                break;
-            }
-        }
 
 void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue){
         todasLasListas->avionesRegistrados = avionesRegistrados;
@@ -64,18 +36,30 @@ void gestionarPista (ST_TODASLASLISTAS * todasLasListas){
         while (todasLasListas->listaAterrizaje!=NULL){
             ST_LISTAAVIONES * aux = todasLasListas->listaAterrizaje;
             enviarMensaje(aux->avion.cliente, 1);
-            recibirMensajeAterrizajeYDespegue(aux->avion.cliente);
+            //todasLasListas->reservapista = aux->avion.id;
+            while (todasLasListas->reservapista != aux->avion.id){
+                sleep (1);
+            }
             aterrizajeAvion(aux->avion.id);
             enviarMensaje(aux->avion.cliente, 4);
+            ST_LISTAAVIONES * avion = buscarIDEnLista(aux->avion.id, &todasLasListas->avionesRegistrados);
+            avion->avion.estado = 'g';
+            todasLasListas->reservapista = 0;
             todasLasListas->listaAterrizaje = todasLasListas->listaAterrizaje->ste;
             free(aux);
         }
         if (todasLasListas->colaDespegue->cabecera!=NULL){
             ST_LISTAAVIONES *aux = todasLasListas->colaDespegue->cabecera;
             enviarMensaje(aux->avion.cliente, 1);
-            recibirMensajeAterrizajeYDespegue(aux->avion.cliente);
+            //todasLasListas->reservapista = aux->avion.id;
+            while (todasLasListas->reservapista != aux->avion.id){
+                sleep (1);
+            }
             despegueAvion(aux->avion.id);
             enviarMensaje(aux->avion.cliente, 3);
+            ST_LISTAAVIONES * avion = buscarIDEnLista(aux->avion.id, &todasLasListas->avionesRegistrados);
+            avion->avion.estado = 'v';
+            todasLasListas->reservapista = 0;
             todasLasListas->colaDespegue->cabecera = todasLasListas->colaDespegue->cabecera->ste;
             free(aux);
         }

@@ -1,0 +1,246 @@
+# depslib dependency file v1.0
+1560366183 source:/home/geminis2/Escritorio/TPOS/OStp2019-my-branch-Monti/TPOS_TORRE/aviones.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+	"aviones.h"
+
+1560366183 /home/geminis2/Escritorio/TPOS/OStp2019-my-branch-Monti/TPOS_TORRE/aviones.h
+
+1560366183 source:/home/geminis2/Escritorio/TPOS/OStp2019-my-branch-Monti/TPOS_TORRE/gestionPista.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	"gestionPista.h"
+
+1560366183 /home/geminis2/Escritorio/TPOS/OStp2019-my-branch-Monti/TPOS_TORRE/gestionPista.h
+	"listaAviones.h"
+
+1560366183 /home/geminis2/Escritorio/TPOS/OStp2019-my-branch-Monti/TPOS_TORRE/listaAviones.h
+	"aviones.h"
+
+1560366183 source:/home/geminis2/Escritorio/TPOS/OStp2019-my-branch-Monti/TPOS_TORRE/listaAviones.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	"listaAviones.h"
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+
+1560384547 source:/home/geminis2/Escritorio/TPOS/OStp2019-my-branch-Monti/TPOS_TORRE/main.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
+	"listaAviones.h"
+	"gestionPista.h"
+	"gestionCombustibleAterrizando.h"
+	"gestionCombustible.h"
+
+1560385280 source:/home/geminis2/Escritorio/TPOS/OStp2019-my-branch-Monti/TPOS_TORRE/gestionCombustible.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	<unistd.h>
+	"aviones.h"
+	"listaAviones.h"
+	"gestionCombustible.h"
+
+1560385182 /home/geminis2/Escritorio/TPOS/OStp2019-my-branch-Monti/TPOS_TORRE/gestionCombustible.h
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
+	"listaAviones.h"
+
+1560386458 source:/home/geminis2/Escritorio/TPOS/OStp2019-my-branch-Monti/TPOS_TORRE/gestionCombustibleAterrizando.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	<unistd.h>
+	"aviones.h"
+	"listaAviones.h"
+	"gestionCombustibleAterrizando.h"
+
+1560385438 /home/geminis2/Escritorio/TPOS/OStp2019-my-branch-Monti/TPOS_TORRE/gestionCombustibleAterrizando.h
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
+	"listaAviones.h"
+
+1560384547 source:/home/geminis2/Escritorio/TPOS(comentada)/tpos/TPOS_TORRE/main.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
+	"listaAviones.h"
+	"gestionPista.h"
+	"gestionCombustibleAterrizando.h"
+	"gestionCombustible.h"
+
+1560473108 /home/geminis2/Escritorio/TPOS(comentada)/tpos/TPOS_TORRE/aviones.h
+
+1560479149 /home/geminis2/Escritorio/TPOS(comentada)/tpos/TPOS_TORRE/listaAviones.h
+	"aviones.h"
+
+1560366183 /home/geminis2/Escritorio/TPOS(comentada)/tpos/TPOS_TORRE/gestionPista.h
+	"listaAviones.h"
+
+1560478795 /home/geminis2/Escritorio/TPOS(comentada)/tpos/TPOS_TORRE/gestionCombustibleAterrizando.h
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
+	"listaAviones.h"
+
+1560478795 /home/geminis2/Escritorio/TPOS(comentada)/tpos/TPOS_TORRE/gestionCombustible.h
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
+	"listaAviones.h"
+
+1560470248 source:/home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/aviones.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+	"aviones.h"
+
+1560473108 /home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/aviones.h
+
+1560470832 source:/home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/gestionCombustible.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	<unistd.h>
+	"aviones.h"
+	"listaAviones.h"
+	"gestionCombustible.h"
+
+1560479149 /home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/listaAviones.h
+	"aviones.h"
+
+1560478795 /home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/gestionCombustible.h
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
+	"listaAviones.h"
+
+1560470832 source:/home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/gestionCombustibleAterrizando.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	<unistd.h>
+	"aviones.h"
+	"listaAviones.h"
+	"gestionCombustibleAterrizando.h"
+
+1560492823 /home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/gestionCombustibleAterrizando.h
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
+	"listaAviones.h"
+
+1560472431 source:/home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/gestionPista.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	"gestionPista.h"
+
+1560366183 /home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/gestionPista.h
+	"listaAviones.h"
+
+1560472794 source:/home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/listaAviones.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	"listaAviones.h"
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+
+1560384547 source:/home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/main.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
+	"listaAviones.h"
+	"gestionPista.h"
+	"gestionCombustibleAterrizando.h"
+	"gestionCombustible.h"
+
+1560400396 source:/home/geminis2/Escritorio/OStp2019/tpos/TPOS_TORRE/restarCombustible.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"listaAviones.h"
+	"gestionCombustibleAterrizando.h"
+

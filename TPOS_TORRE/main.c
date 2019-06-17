@@ -8,6 +8,11 @@
 #include "aviones.h"
 #include "listaAviones.h"
 #include "gestionPista.h"
+<<<<<<< HEAD
+=======
+#include "gestionCombustibleAterrizando.h"
+#include "gestionCombustible.h"
+>>>>>>> rama_geminis
 #define tamanioBufferMensaje 100
 
 
@@ -52,6 +57,16 @@ int main(void) {
 
     pthread_create(&gestionPista, NULL, (void*)gestionarPista, (void*)&todasLasListas);
 
+<<<<<<< HEAD
+=======
+    pthread_t gestionCombustible;
+
+    pthread_create(&gestionCombustible, NULL, (void*)gestionarCombustibleRegistrados, (void*)&todasLasListas);
+
+    pthread_t gestionCombustibleAterrizando;
+
+    pthread_create(&gestionCombustibleAterrizando, NULL, (void*)gestionarCombustibleAterrizando, (void*)&todasLasListas);
+>>>>>>> rama_geminis
 
     while (1){
 

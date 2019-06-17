@@ -9,10 +9,29 @@
 #define tamanioBufferMensaje 100
 #define longCantComb 10
 
+<<<<<<< HEAD
+=======
+//1
+/********************************************!
+*@fn crearLista
+**Pone la cabecera de una lista en NULL
+*@param c1 ST_LISTAAVIONES**cabecera
+*******************************************/
+>>>>>>> rama_geminis
 void crearLista (ST_LISTAAVIONES**cabecera){
         *cabecera = NULL;
 }
 
+<<<<<<< HEAD
+=======
+//2
+/********************************************!
+*@fn ST_LISTAAVIONES *crearNodo
+**crea nodo
+*@param ST_AVION *avion
+*@return nodo
+********************************************/
+>>>>>>> rama_geminis
 ST_LISTAAVIONES * crearNodo (ST_AVION * avion) {
         ST_LISTAAVIONES * nodo = (ST_LISTAAVIONES*)malloc(sizeof(ST_LISTAAVIONES));
         nodo->avion = *avion;
@@ -20,11 +39,30 @@ ST_LISTAAVIONES * crearNodo (ST_AVION * avion) {
         return nodo;
 }
 
+<<<<<<< HEAD
+=======
+//3
+/********************************************!
+*@fn crearCola
+** crea cola
+*@param ST_COLA *cola
+********************************************/
+>>>>>>> rama_geminis
 void crearCola(ST_COLA * cola){
     cola->cabecera = NULL;
     cola->fin = NULL;
 }
 
+<<<<<<< HEAD
+=======
+//4
+/********************************************!
+*@fn agregarACola
+**agrega a la cola
+*@param ST_COLA *cola
+*@param ST_AVION *avion
+********************************************/
+>>>>>>> rama_geminis
 void agregarACola (ST_COLA * cola, ST_AVION * avion){
     ST_LISTAAVIONES * nodo = crearNodo(avion);
 
@@ -37,7 +75,33 @@ void agregarACola (ST_COLA * cola, ST_AVION * avion){
     cola->fin = nodo;
 }
 
+<<<<<<< HEAD
 
+=======
+//5
+/********************************************!
+*@fn ST_AVION eliminarDeCola
+*@param ST_COLA *cola
+*@return avion
+********************************************/
+ST_AVION eliminarDeCola (ST_COLA * cola){
+    ST_LISTAAVIONES * aux = cola->cabecera;
+    ST_AVION avion = cola->cabecera->avion;
+
+    cola->cabecera = cola->cabecera->ste;
+    free(aux);
+
+    return avion;
+}
+
+//6
+/********************************************!
+*@fn insertarOrdenado
+**inserta ordenado un nuevo avion a la lista de aviones
+*@param c1 ST_LISTAAVIONES**cabecera
+*@param c2 ST_AVION avion
+********************************************/
+>>>>>>> rama_geminis
 void insertarOrdenado (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
     //ST_LISTAAVIONES * busqueda = buscarIDEnLista(avion.id, cabecera);
     /*if (busqueda!=NULL){
@@ -64,6 +128,15 @@ void insertarOrdenado (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
     }
 }
 
+<<<<<<< HEAD
+=======
+//7
+/********************************************!
+*@fn mostrarLista
+**Muestra las caracteristicas del avion por pantalla
+*@param ST_LISTAAVIONES**cabecera
+********************************************/
+>>>>>>> rama_geminis
 void mostrarLista (ST_LISTAAVIONES**cabecera){
     ST_LISTAAVIONES * aux = *cabecera;
     if (aux!=NULL){
@@ -83,6 +156,20 @@ void mostrarLista (ST_LISTAAVIONES**cabecera){
     }
 }
 
+<<<<<<< HEAD
+=======
+
+//8
+/********************************************!
+*@fn ST_LISTAAVIONES * buscarIDEnLista
+**Busca un avion de la lista de aviones
+**por numero de identificacion.
+*@param c1 int ID
+*@param c2 ST_LISTAAVIONES ** cabecera
+*@return Null si el avion no fue encontrado
+*@return axu la estructura del avion encontrado
+********************************************/
+>>>>>>> rama_geminis
 ST_LISTAAVIONES * buscarIDEnLista (int ID, ST_LISTAAVIONES ** cabecera){
     ST_LISTAAVIONES * aux = *cabecera;
     ST_LISTAAVIONES * ant = NULL;
@@ -98,7 +185,42 @@ ST_LISTAAVIONES * buscarIDEnLista (int ID, ST_LISTAAVIONES ** cabecera){
     return aux;
 }
 
+<<<<<<< HEAD
 
+=======
+//9
+/********************************************!
+*@fn eliminarDeLista
+**Elimina un avion de la lista de aviones
+**Buscandolo por identificacion.
+*@param c1 int ID
+*@param c2 ST_LISTAAVIONES ** cabecera
+********************************************/
+void  eliminarDeLista (int ID, ST_LISTAAVIONES ** cabecera){
+    ST_LISTAAVIONES * aux = *cabecera;
+    ST_LISTAAVIONES * ant = NULL;
+
+    while ((*cabecera!=NULL) && (aux->ste!=NULL) && (ID>aux->avion.id)){
+        ant = aux;
+        aux = aux->ste;
+    }
+    if ((ID!=aux->avion.id)||(*cabecera==NULL)){
+        perror("\nElemento no encontrado\n");
+        return NULL;
+    }
+
+        ant->ste = aux->ste;
+        free(aux);
+}
+
+//10
+/********************************************!
+*@fn ordenarPorCombustible
+**Ordena la lista de aviones por cantidad de combustible
+*@param c1 ST_LISTAAVIONES ** cabecera
+*@param c2 ST_AVION avion
+********************************************/
+>>>>>>> rama_geminis
 void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
     //ST_LISTAAVIONES * busqueda = buscarIDEnLista(avion.id, cabecera);
     /*if (busqueda!=NULL){
@@ -125,7 +247,19 @@ void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
     }
 }
 
+<<<<<<< HEAD
 
+=======
+//11
+/********************************************!
+*@fn solicitarPista
+**los aviones en estado 'en vuelo' seran ordenados por combustible,
+**y los que esteen en listos esperando en hangar seran agregados a la cola de despegar
+*@param c1 ST_LISTAAVIONES ** listaAterrizar
+*@param c2 ST_COLA * colaDespegar
+*@param c3 ST_AVION * avion
+********************************************/
+>>>>>>> rama_geminis
 void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, ST_AVION * avion){
         if (avion->estado == 'v'){
             ordenarPorCombustible(listaAterrizar, *avion);
@@ -140,12 +274,31 @@ void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, 
         }
 }
 
+<<<<<<< HEAD
+=======
+//12
+/********************************************!
+*@fn aterrizar
+**
+*@param c1 int * IDReservaPista
+*@param c2 int * cliente
+*@param c3 ST_AVION * avion
+********************************************/
+>>>>>>> rama_geminis
 void aterrizar (int * IDReservaPista, int * cliente, ST_AVION * avion){
         if (avion->id == *IDReservaPista){
 
         }
 }
 
+<<<<<<< HEAD
+=======
+//13
+/********************************************!
+*@fn recibirMensaje
+*@param c1 ST_TODASLASLISTAS * todasLasListas
+********************************************/
+>>>>>>> rama_geminis
 void recibirMensaje (ST_TODASLASLISTAS * todasLasListas){
         while (1){
             ST_AVION * avion = (ST_AVION*)malloc(sizeof(ST_AVION));
@@ -190,6 +343,7 @@ void recibirMensaje (ST_TODASLASLISTAS * todasLasListas){
                 printf("\n Se copia el aviòn en una cola de espera para aterrizar u otra para despegar \n");
                 free(bufferMensaje);
                 free(avion);
+<<<<<<< HEAD
                 break;
                 case 3:
                 todasLasListas->reservapista = avion->id;
@@ -205,6 +359,15 @@ void recibirMensaje (ST_TODASLASLISTAS * todasLasListas){
                 free(bufferMensaje);
                 free(avion);
                 break;
+=======
+                /*case 3:
+
+                printf ("\n Se envìa la orden para despegar\n");
+                break;
+                case 4:
+
+                break;*/
+>>>>>>> rama_geminis
             }
         }
     }

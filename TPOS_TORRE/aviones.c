@@ -5,26 +5,20 @@
 #include "aviones.h"
 #define longMensajeEnviado 2
 
-<<<<<<< HEAD
-
-
-=======
 /********************************************!
 *@fn  strtoi
 combierte una cifra entera en un char
 *@param int N
 *@return una variable char
 ********************************************/
->>>>>>> rama_geminis
+
    char strtoi (int N){
         char salida;
         salida = N + 48;
         return salida;
     }
 
-<<<<<<< HEAD
 
-=======
 /********************************************!
 *@fn  * enteroACadena
 combierte un valor entero en una cadena
@@ -32,7 +26,7 @@ combierte un valor entero en una cadena
 *@param char *cadena
 *@return cadena
 ********************************************/
->>>>>>> rama_geminis
+
     char * enteroACadena (int valor, char * cadena){
         int cont = 0;
         char cad [10];
@@ -55,8 +49,7 @@ combierte un valor entero en una cadena
         return cadena;
     }
 
-<<<<<<< HEAD
-=======
+
 
 /********************************************!
 *@fn  registrarAvion
@@ -64,15 +57,14 @@ combierte un valor entero en una cadena
 **pasa de estado h(en hangar) a g(listo/hangar)
 *@param ST_AVION *avion
 ********************************************/
->>>>>>> rama_geminis
+
     void registrarAvion (ST_AVION * avion){
             if (avion->estado == 'h'){
                     avion->estado = 'g';
             }
     }
 
-<<<<<<< HEAD
-=======
+
 
 /********************************************!
 *@fn  enviarMensaje
@@ -81,7 +73,7 @@ combierte un valor entero en una cadena
 *@param int cliente
 *@param int opcion
 ********************************************/
->>>>>>> rama_geminis
+
     void enviarMensaje (int cliente, int opcion){
             switch(opcion){
                 case 0: // La solicitud se proceso exitosamente

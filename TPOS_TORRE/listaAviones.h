@@ -1,10 +1,10 @@
 #ifndef LISTAAVIONES_H_INCLUDED
 #define LISTAAVIONES_H_INCLUDED
-<<<<<<< HEAD
+
 
 #include "aviones.h"
 
-=======
+
 #include "aviones.h"
 
 /********************************************!
@@ -42,26 +42,25 @@
 *@struct struct listaAviones * ste
 **Estructura para listar a los aviones
 ********************************/
->>>>>>> rama_geminis
+
 typedef struct listaAviones {
     ST_AVION avion;
     struct listaAviones * ste;
 }ST_LISTAAVIONES;
 
-<<<<<<< HEAD
-=======
+
+
 /*******************************!
 *@struct ST_COLA
 **estructura para una cola
 ********************************/
->>>>>>> rama_geminis
+
 typedef struct {
     ST_LISTAAVIONES *cabecera;
     ST_LISTAAVIONES *fin;
 }ST_COLA;
 
-<<<<<<< HEAD
-=======
+
 /*******************************!
 *@struct ST_TODASLASLISTAS
 **Esta estructura reune las listas de los
@@ -69,7 +68,7 @@ aviones registrados, la lista de los aviones que
 estan por Aterrizar, la cola de los aviones que estan
 por despegar.
 ********************************/
->>>>>>> rama_geminis
+
 typedef struct {
     ST_LISTAAVIONES * avionesRegistrados;
     ST_LISTAAVIONES * listaAterrizaje;
@@ -78,7 +77,7 @@ typedef struct {
     int reservapista;
 } ST_TODASLASLISTAS;
 
-<<<<<<< HEAD
+
 void crearCola(ST_COLA * cola);
 
 void agregarACola (ST_COLA * cola, ST_AVION * avion);
@@ -99,7 +98,7 @@ void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion);
 
 void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, ST_AVION * avion);
 
-=======
+
 //1
 void crearLista (ST_LISTAAVIONES**cabecera);
 
@@ -137,7 +136,7 @@ void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, 
 /*void aterrizar (int * IDReservaPista, int * cliente, ST_AVION * avion)*/
 
 //13
->>>>>>> rama_geminis
+
 void recibirMensaje (ST_TODASLASLISTAS * todasLasListas);
 
 #endif // LISTAAVIONES_H_INCLUDED

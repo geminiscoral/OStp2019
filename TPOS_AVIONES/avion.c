@@ -144,9 +144,13 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
                     }
                     if (aux==3){
                         printf ("\n El avion despegò satisfactoriamente\n");
+                        avion->estado = 'v';
+                        *pistaAsignada = 0;
                     }
                     if (aux==4){
                         printf ("\n El avion aterrizo satisfactoriamente\n");
+                        avion->estado = 'g';
+                        *pistaAsignada = 0;
                     }
                     break;
                 }

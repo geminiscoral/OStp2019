@@ -10,7 +10,6 @@
 #include "aviones.h"
 #include "listaAviones.h"
 
-<<<<<<< HEAD
 /********************************************!
 ** TAD: gestionarCombustibleRegistrados
 **Gestion Combustible, es este TAD gestinaremos
@@ -29,14 +28,7 @@ ST_TODASLASLISTAS
 <void restarCombustible> <(ST_TODASLASLISTAS *todasLasListas)>
 
 *******************************************/
-
-
-void gestionarCombustibleRegistrados(ST_TODASLASLISTAS *todasLasListas);
-
-void restarCombustible(ST_TODASLASLISTAS *todasLasListas);
-=======
 void gestionarCombustibleRegistrados(ST_TODASLASLISTAS *todasLasListas);
 void restarCombustible(ST_LISTAAVIONES *subLista);
->>>>>>> my_branch_psang
 
 #endif // GESTIONCOMBUSTIBLE_H_INCLUDED

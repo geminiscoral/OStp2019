@@ -9,15 +9,12 @@
 #define longID 9
 #define tamanioBufferMensaje 100
 
-<<<<<<< HEAD
 
 /********************************************!
 *@fn  recibirMensajeAterrizajeYDespegue
 **
 *@param int cliente
 ********************************************/
-=======
->>>>>>> my_branch_psang
 void recibirMensajeAterrizajeYDespegue (int cliente){
             ST_AVION * avion = (ST_AVION*)malloc(sizeof(ST_AVION));
             char * bufferMensaje = (char*)malloc(tamanioBufferMensaje);
@@ -47,7 +44,6 @@ void recibirMensajeAterrizajeYDespegue (int cliente){
             }
         }
 
-<<<<<<< HEAD
 
 /********************************************!
 *@fn  aunarListas
@@ -58,8 +54,8 @@ void recibirMensajeAterrizajeYDespegue (int cliente){
 *@param c5 {ST_LISTAAVIONES} * listaAterrizaje
 *@param c6 {ST_COLA} * colaDespegue
 ********************************************/
-=======
->>>>>>> my_branch_psang
+
+
 void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue){
         todasLasListas->avionesRegistrados = avionesRegistrados;
         todasLasListas->listaAterrizaje = listaAterrizaje;
@@ -68,7 +64,6 @@ void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDRes
         todasLasListas->reservapista = *IDReservaPista;
 }
 
-<<<<<<< HEAD
 
 /********************************************!
 *@fn  despegueAvion
@@ -77,15 +72,13 @@ void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDRes
 ** indicandole que el avion quedo en vuelo.
 *@param c1 int ID
 ********************************************/
-=======
->>>>>>> my_branch_psang
 void despegueAvion (int ID){
         printf("Avion %i despegando ..↑↑↑..\n", ID);
         sleep(25);
         printf("Avion %i en vuelo ✈ \n", ID);
 }
 
-<<<<<<< HEAD
+
 
 /********************************************!
 *@fn  aterrizajeAvion
@@ -94,8 +87,6 @@ void despegueAvion (int ID){
 ** indicandole que el avion aterrizo.
 *@param c1 int ID
 ********************************************/
-=======
->>>>>>> my_branch_psang
 void aterrizajeAvion (int ID){
         printf("Avion %i aterrizando ..↑↑↑..\n", ID);
         sleep(25);
@@ -103,21 +94,18 @@ void aterrizajeAvion (int ID){
 }
 
 
-<<<<<<< HEAD
 /********************************************!
 *@fn gestionarPista
 **Los aviones pueden solicitar pista para aterrizar.
 **Ademas gestinara el avance de la cola de espera de los aviones que esteen por despegar.
 *@param c1 ST_TODASLASLISTAS * todasLasListas
 ********************************************/
-=======
->>>>>>> my_branch_psang
 void gestionarPista (ST_TODASLASLISTAS * todasLasListas){
     while (1){
         while (todasLasListas->listaAterrizaje!=NULL){
             ST_LISTAAVIONES * aux = todasLasListas->listaAterrizaje;
             enviarMensaje(aux->avion.cliente, 1);
-<<<<<<< HEAD
+
 
             //todasLasListas->reservapista = aux->avion.id;
             while (todasLasListas->reservapista != aux->avion.id){
@@ -133,18 +121,13 @@ void gestionarPista (ST_TODASLASLISTAS * todasLasListas){
             aterrizajeAvion(aux->avion.id);
             enviarMensaje(aux->avion.cliente, 4);
 
-=======
-            recibirMensajeAterrizajeYDespegue(aux->avion.cliente);
-            aterrizajeAvion(aux->avion.id);
-            enviarMensaje(aux->avion.cliente, 4);
->>>>>>> my_branch_psang
             todasLasListas->listaAterrizaje = todasLasListas->listaAterrizaje->ste;
             free(aux);
         }
         if (todasLasListas->colaDespegue->cabecera!=NULL){
             ST_LISTAAVIONES *aux = todasLasListas->colaDespegue->cabecera;
             enviarMensaje(aux->avion.cliente, 1);
-<<<<<<< HEAD
+
 
             //todasLasListas->reservapista = aux->avion.id;
             while (todasLasListas->reservapista != aux->avion.id){
@@ -160,17 +143,10 @@ void gestionarPista (ST_TODASLASLISTAS * todasLasListas){
             despegueAvion(aux->avion.id);
             enviarMensaje(aux->avion.cliente, 3);
 
-=======
-            recibirMensajeAterrizajeYDespegue(aux->avion.cliente);
-            despegueAvion(aux->avion.id);
-            enviarMensaje(aux->avion.cliente, 3);
->>>>>>> my_branch_psang
             todasLasListas->colaDespegue->cabecera = todasLasListas->colaDespegue->cabecera->ste;
             free(aux);
         }
     }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> my_branch_psang
+

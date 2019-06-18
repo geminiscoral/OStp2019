@@ -2,7 +2,6 @@
 #define AVIONES_H_INCLUDED
 
 
-<<<<<<< HEAD
 /********************************************!
 ** TAD: aviones
 **este TAD se encargara del envio de mensajes de los aviones
@@ -31,8 +30,7 @@ N, valor, opcion, cliente
 **Esta estructura define las caracteristicas de un avion
 ********************************/
 
-=======
->>>>>>> my_branch_psang
+
 typedef struct {
     int cliente;
     int id;
@@ -42,10 +40,6 @@ typedef struct {
     char estado;
 }ST_AVION;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> my_branch_psang
 char strtoi (int N);
 
 char * enteroACadena (int valor, char * cadena);

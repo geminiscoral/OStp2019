@@ -10,8 +10,6 @@
 #include "listaAviones.h"
 #include "gestionCombustible.h"
 
-<<<<<<< HEAD
-
 /********************************************!
 *@fn  gestionarCombustibleRegistrados
 **Esta fn verifica, si hay un avion con su estado 'v'(en vuelo)
@@ -19,17 +17,13 @@
 **Ademas, duerme el proceso 5 segundos
 *@param c1 ST_TODASLASLISTAS *todasLasListas
 ********************************************/
-=======
->>>>>>> my_branch_psang
 void gestionarCombustibleRegistrados(ST_TODASLASLISTAS *todasLasListas){
     while(1){
         while(todasLasListas->avionesRegistrados!=NULL){
             ST_LISTAAVIONES *aux=todasLasListas->avionesRegistrados;
             if(aux->avion.estado=='v'){
-<<<<<<< HEAD
                 //funcion resta combustible;
-=======
->>>>>>> my_branch_psang
+
                 restarCombustible(todasLasListas->avionesRegistrados);
             }
             aux=aux->ste;

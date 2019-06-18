@@ -3,8 +3,6 @@
 
 #include "listaAviones.h"
 
-<<<<<<< HEAD
-
 /********************************************!
 ** TAD: gestionPista
 **En este TAD gestionaremos las colas de los aviones, y ademas
@@ -25,13 +23,11 @@ cliente, ID,
 *******************************************/
 
 
-=======
->>>>>>> my_branch_psang
+
 void gestionarPista (ST_TODASLASLISTAS * todasLasListas);
 
 void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue);
 
-<<<<<<< HEAD
 //se realizo prueva de compilacion y no genera errores, pero las marcamos en comentario para verificar su uso.
 /*void recibirMensajeAterrizajeYDespegue (int cliente);*/
 
@@ -39,8 +35,4 @@ void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDRes
 
 /*void aterrizajeAvion (int ID)*/
 
-
-
-=======
->>>>>>> my_branch_psang
 #endif // GESTIONPISTA_H_INCLUDED

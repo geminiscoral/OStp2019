@@ -63,12 +63,7 @@ void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDRes
         todasLasListas->reservapista = *IDReservaPista;
 }
 
-<<<<<<< HEAD
-
 /******************************************//**
-=======
-/********************************************!
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
 *@fn  despegueAvion
 **suspende el proceso el tiempo especificado, simulando el tiempo
 **de despegue del avion, una vez finalizado, imprime un mensaje
@@ -81,13 +76,7 @@ void despegueAvion (int ID){
         printf("Avion %i en vuelo ✈ \n", ID);
 }
 
-<<<<<<< HEAD
-
-
 /******************************************//**
-=======
-/********************************************!
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
 *@fn  aterrizajeAvion
 **suspende el proceso 25 segundos, simulando el tiempo de
 **aterrizaje del avion, una vez finalizado, imprime un mensaje
@@ -100,12 +89,7 @@ void aterrizajeAvion (int ID){
         printf("Avion %i en hangar ✈ \n", ID);
 }
 
-<<<<<<< HEAD
-
 /******************************************//**
-=======
-/********************************************!
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
 *@fn gestionarPista
 **Los aviones pueden solicitar pista para aterrizar.
 **gestionara el avance de la cola de espera de los aviones que esten para despegar.

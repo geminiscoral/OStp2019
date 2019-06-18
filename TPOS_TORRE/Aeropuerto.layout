@@ -2,13 +2,29 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="aviones.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="listaAviones.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-<<<<<<< HEAD
-			<Cursor1 position="1595" topLine="1" />
-=======
+			<Cursor1 position="2376" topLine="67" />
+		</Cursor>
+	</File>
+	<File name="listaAviones.c" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3855" topLine="80" />
+		</Cursor>
+	</File>
+	<File name="gestionPista.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2200" topLine="57" />
+		</Cursor>
+	</File>
+	<File name="aviones.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="780" topLine="20" />
+		</Cursor>
+	</File>
+	<File name="aviones.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
 			<Cursor1 position="830" topLine="3" />
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
 		</Cursor>
 		<Folding>
 			<Collapse line="7" />
@@ -17,166 +33,11 @@
 			<Collapse line="27" />
 			<Collapse line="49" />
 			<Collapse line="55" />
-			<Collapse line="62" />
-			<Collapse line="69" />
 		</Folding>
 	</File>
-<<<<<<< HEAD
-	<File name="gestionCombustibleAterrizando.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="gestionCombustibleAterrizando.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="306" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="gestionPista.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="139" topLine="8" />
-=======
-	<File name="main.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1186" topLine="32" />
-		</Cursor>
-	</File>
-	<File name="aviones.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1681" topLine="54" />
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
-		</Cursor>
-		<Folding>
-			<Collapse line="5" />
-		</Folding>
-	</File>
-<<<<<<< HEAD
-	<File name="gestionCombustible.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="294" topLine="21" />
-		</Cursor>
-	</File>
-	<File name="listaAviones.h" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="134" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="gestionCombustibleAterrizando.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="340" topLine="4" />
-=======
-	<File name="listaAviones.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3746" topLine="100" />
-		</Cursor>
-	</File>
-	<File name="gestionCombustible.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="431" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="gestionCombustibleAterrizando.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="985" topLine="3" />
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
-		</Cursor>
-		<Folding>
-			<Collapse line="13" />
-		</Folding>
-	</File>
-<<<<<<< HEAD
-	<File name="listaAviones.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="940" topLine="0" />
-=======
-	<File name="gestionCombustible.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="465" topLine="0" />
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
-		</Cursor>
-		<Folding>
-			<Collapse line="121" />
-			<Collapse line="126" />
-			<Collapse line="146" />
-			<Collapse line="155" />
-			<Collapse line="172" />
-			<Collapse line="179" />
-			<Collapse line="197" />
-			<Collapse line="203" />
-			<Collapse line="230" />
-			<Collapse line="238" />
-			<Collapse line="253" />
-			<Collapse line="260" />
-			<Collapse line="267" />
-			<Collapse line="271" />
-		</Folding>
-	</File>
-<<<<<<< HEAD
-	<File name="gestionCombustible.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="318" topLine="4" />
-=======
-	<File name="aviones.h" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="283" topLine="0" />
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
-		</Cursor>
-		<Folding>
-			<Collapse line="12" />
-		</Folding>
-	</File>
-<<<<<<< HEAD
-	<File name="restarCombustible.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="249" topLine="0" />
-=======
-	<File name="listaAviones.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="10623" topLine="291" />
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
-		</Cursor>
-		<Folding>
-			<Collapse line="11" />
-			<Collapse line="17" />
-		</Folding>
-	</File>
-<<<<<<< HEAD
-	<File name="main.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1428" topLine="52" />
-		</Cursor>
-	</File>
-	<File name="gestionPista.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3359" topLine="4" />
-=======
-	<File name="gestionPista.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3305" topLine="46" />
-		</Cursor>
-	</File>
-	<File name="restarCombustible.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="649" topLine="0" />
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
-		</Cursor>
-		<Folding>
-			<Collapse line="12" />
-			<Collapse line="17" />
-			<Collapse line="47" />
-			<Collapse line="56" />
-			<Collapse line="65" />
-			<Collapse line="72" />
-			<Collapse line="80" />
-			<Collapse line="87" />
-			<Collapse line="94" />
-			<Collapse line="100" />
-		</Folding>
-	</File>
-<<<<<<< HEAD
-	<File name="aviones.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="677" topLine="38" />
-=======
-	<File name="gestionPista.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="269" topLine="0" />
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
+			<Cursor1 position="341" topLine="23" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

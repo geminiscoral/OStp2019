@@ -1,8 +1,6 @@
 #ifndef AVIONES_H_INCLUDED
 #define AVIONES_H_INCLUDED
 
-<<<<<<< HEAD
-
 /******************************************//**
 =======
 /********************************************!
@@ -26,14 +24,10 @@ N, valor, opcion, cliente
 <void registrarAvion> <(ST_AVION * avion)>
 *******************************************/
 
-<<<<<<< HEAD
 
 
 
 /****************************//**
-=======
-/*******************************!
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
 *@struct ST_AVION
 **Esta estructura define las caracteristicas de un avion
 ********************************/

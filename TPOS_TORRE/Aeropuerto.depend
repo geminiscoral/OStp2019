@@ -313,16 +313,16 @@
 	"listaAviones.h"
 	"gestionCombustibleAterrizando.h"
 
-1560817749 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/aviones.c
+1560872558 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/aviones.c
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
 	<string.h>
 	"aviones.h"
 
-1560817405 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/aviones.h
+1560872839 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/aviones.h
 
-1560818195 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustible.c
+1560872558 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustible.c
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -335,10 +335,10 @@
 	"listaAviones.h"
 	"gestionCombustible.h"
 
-1560817885 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/listaAviones.h
+1560872932 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/listaAviones.h
 	"aviones.h"
 
-1560817935 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustible.h
+1560872558 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustible.h
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -351,7 +351,7 @@
 
 1560400258 /home/user1/TPOS/TPOS_TORRE/gestionCombustible.h
 
-1560818081 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustibleAterrizando.c
+1560872558 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustibleAterrizando.c
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -366,7 +366,7 @@
 
 1560386654 source:/home/user1/TPOS/TPOS_TORRE/restarCombustible.c
 
-1560818032 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustibleAterrizando.h
+1560872958 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustibleAterrizando.h
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -377,7 +377,7 @@
 	"aviones.h"
 	"listaAviones.h"
 
-1560818120 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionPista.c
+1560873027 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionPista.c
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -386,10 +386,10 @@
 	<string.h>
 	"gestionPista.h"
 
-1560818112 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionPista.h
+1560872558 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionPista.h
 	"listaAviones.h"
 
-1560817405 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/listaAviones.c
+1560873085 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/listaAviones.c
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -398,13 +398,23 @@
 	<sys/socket.h>
 	<string.h>
 
-1560813246 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/main.c
+1560870942 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/main.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
 	"listaAviones.h"
+	"gestionPista.h"
 	"gestionCombustibleAterrizando.h"
+	"gestionCombustible.h"
 
 1560399052 source:/home/user1/TPOS/TPOS_TORRE/gestionCombustible.c
 
-1560817489 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/restarCombustible.c
+1560872558 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/restarCombustible.c
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>

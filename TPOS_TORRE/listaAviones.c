@@ -138,13 +138,9 @@ void mostrarLista (ST_LISTAAVIONES**cabecera){
 }
 
 //8
-<<<<<<< HEAD
+
 /******************************************//**
 *@fn ST_LISTAAVIONES * buscarIDEnLista
-=======
-/********************************************!
-*@fn buscarIDEnLista
->>>>>>> 9cafbad171adf2395a13a3c03f6a3bb106ad926f
 **Busca un avion de la lista de aviones
 **por numero de identificacion.
 *@param c1 int ID

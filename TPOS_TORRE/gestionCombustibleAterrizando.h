@@ -11,7 +11,7 @@
 #include "listaAviones.h"
 
 
-/********************************************!
+/*****************************************//**
 ** TAD: gestionarCombustibleAterrizando
 **En este TAD gestionaremos el uso de combustible de
 **todos los aviones que se encuentra en la lista

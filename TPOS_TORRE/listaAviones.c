@@ -12,7 +12,7 @@
 
 
 //1
-/********************************************!
+/******************************************//**
 *@fn crearLista
 **Pone la cabecera de una lista en NULL
 *@param c1 ST_LISTAAVIONES**cabecera
@@ -24,7 +24,7 @@ void crearLista (ST_LISTAAVIONES**cabecera){
 
 
 //2
-/********************************************!
+/******************************************//**
 *@fn ST_LISTAAVIONES *crearNodo
 **crea nodo
 *@param ST_AVION *avion
@@ -39,7 +39,7 @@ ST_LISTAAVIONES * crearNodo (ST_AVION * avion) {
 
 
 //3
-/********************************************!
+/******************************************//**
 *@fn crearCola
 ** crea cola
 *@param ST_COLA *cola
@@ -51,7 +51,7 @@ void crearCola(ST_COLA * cola){
 
 
 //4
-/********************************************!
+/******************************************//**
 *@fn agregarACola
 **agrega a la cola
 *@param ST_COLA *cola
@@ -70,7 +70,7 @@ void agregarACola (ST_COLA * cola, ST_AVION * avion){
 }
 
 //5
-/********************************************!
+/******************************************//**
 *@fn ST_AVION eliminarDeCola
 *@param ST_COLA *cola
 *@return avion
@@ -86,7 +86,7 @@ ST_AVION eliminarDeCola (ST_COLA * cola){
 }
 
 //6
-/********************************************!
+/******************************************//**
 *@fn insertarOrdenado
 **inserta ordenado un nuevo avion a la lista de aviones
 *@param c1 ST_LISTAAVIONES**cabecera
@@ -119,7 +119,7 @@ void insertarOrdenado (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
 }
 
 //7
-/********************************************!
+/******************************************//**
 *@fn mostrarLista
 **Muestra las caracteristicas del avion por pantalla
 *@param ST_LISTAAVIONES**cabecera
@@ -144,7 +144,7 @@ void mostrarLista (ST_LISTAAVIONES**cabecera){
 }
 
 //8
-/********************************************!
+/******************************************//**
 *@fn ST_LISTAAVIONES * buscarIDEnLista
 **Busca un avion de la lista de aviones
 **por numero de identificacion.
@@ -170,7 +170,7 @@ ST_LISTAAVIONES * buscarIDEnLista (int ID, ST_LISTAAVIONES ** cabecera){
 
 
 //9
-/********************************************!
+/******************************************//**
 *@fn eliminarDeLista
 **Elimina un avion de la lista de aviones
 **Buscandolo por identificacion.
@@ -195,7 +195,7 @@ void  eliminarDeLista (int ID, ST_LISTAAVIONES ** cabecera){
 }
 
 //10
-/********************************************!
+/******************************************//**
 *@fn ordenarPorCombustible
 **Ordena la lista de aviones por cantidad de combustible
 *@param c1 ST_LISTAAVIONES ** cabecera
@@ -228,7 +228,7 @@ void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion){
 }
 
 //11
-/********************************************!
+/******************************************//**
 *@fn solicitarPista
 **los aviones en estado 'en vuelo' seran ordenados por combustible,
 **y los que esteen en listos esperando en hangar seran agregados a la cola de despegar
@@ -251,7 +251,7 @@ void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, 
 }
 
 //12
-/********************************************!
+/******************************************//**
 *@fn aterrizar
 **
 *@param c1 int * IDReservaPista
@@ -265,7 +265,7 @@ void aterrizar (int * IDReservaPista, int * cliente, ST_AVION * avion){
 }
 
 //13
-/********************************************!
+/******************************************//**
 *@fn recibirMensaje
 *@param c1 ST_TODASLASLISTAS * todasLasListas
 ********************************************/

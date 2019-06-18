@@ -9,7 +9,7 @@
 #include "gestionCombustibleAterrizando.h"
 
 
-/*******************************!
+/******************************//**
 *@fn restarCombustible
 ** esta funcion resta en dos unidades el conbusible actual de un avion y lo actualiza.
 *@param ST_TODASLASLISTAS *ListasAviones

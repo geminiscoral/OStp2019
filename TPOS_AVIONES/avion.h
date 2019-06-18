@@ -1,7 +1,7 @@
 #ifndef AVION_H_INCLUDED
 #define AVION_H_INCLUDED
 
-/********************************************!
+/******************************************//**
 ** TAD: avion
 **En este TAD, nos encargaremos de la recepción y envío de mensajes de los aviones
 a la torre de control. Además de la creación de un avión.
@@ -24,7 +24,7 @@ charOpcion, cliente, N,
 
 
 
-/*******************************!
+/*****************************//**
 *@struct ST_AVION
 **En esta estructura definiremos las características del avión
 ********************************/

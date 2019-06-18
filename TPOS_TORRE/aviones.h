@@ -2,7 +2,7 @@
 #define AVIONES_H_INCLUDED
 
 
-/********************************************!
+/******************************************//**
 ** TAD: aviones
 **este TAD se encargara del envio de mensajes de los aviones
 **ademas de las registraciones de los mismos.
@@ -25,7 +25,7 @@ N, valor, opcion, cliente
 
 
 
-/*******************************!
+/****************************//**
 *@struct ST_AVION
 **Esta estructura define las caracteristicas de un avion
 ********************************/

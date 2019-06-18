@@ -9,7 +9,7 @@
 #define tamanioBufferMensaje 100
 #define longMensajeRecibido 2
 
-/********************************************!
+/*****************************************//**
 *@fn  strtoi
 convierte una cifra entera en un char
 *@param int N
@@ -21,7 +21,7 @@ convierte una cifra entera en un char
         return salida;
     }
 
-/********************************************!
+/******************************************//**
 *@fn  * enteroACadena
 convierte un número en una cadena
 *@param int valor
@@ -51,7 +51,7 @@ convierte un número en una cadena
     }
 
 
-/********************************************!
+/******************************************//**
 *@fn  * armarMensaje
 **EN esta función concatenamos (armaremos) una sola cadena con todos los datos.
 *@param c1 int cliente
@@ -98,7 +98,7 @@ convierte un número en una cadena
 
     }
 
-/********************************************!
+/******************************************//**
 *@fn  parsearLinea
 **parsear la línea
 *@param c1 FILE* pArchivo
@@ -112,7 +112,7 @@ void parsearLinea (FILE* pArchivo, char * variable){
     }
 
 
-/********************************************!
+/******************************************//**
 *@fn  parsearTextoParametro
 **parsea el texto
 *@param c1 const char * argv1
@@ -137,7 +137,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
 }
 
 
-/********************************************!
+/******************************************//**
 *@fn  ingresarEstado
 **función que toma el valor por teclado, y modifica el estado del avión.
 *@param c1 ST_AVION* avion
@@ -150,7 +150,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
         }
     }
 
-/********************************************!
+/******************************************//**
 *@fn  crearAvion
 **función que crea un avion
 *@param c1 ST_AVION * avion
@@ -163,7 +163,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
     }
 
 
-/********************************************!
+/******************************************//**
 *@fn  recibirMensaje
 **función que recibe la opción por consola y determina la acción siguiente.
 *@param c1 int cliente
@@ -211,8 +211,6 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
                         printf ("\n El avion aterrizo satisfactoriamente\n");
                         avion->estado = 'g';
                         *pistaAsignada = 0;
-
-                    }
                     }
                     break;
                 }
@@ -220,7 +218,7 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
         }
 
 
-/********************************************!
+/*****************************************//**
 *@fn  mostrarEstadoAvion
 **muestra las caracteristicas del avion actual
 **muestra, id, estado y cantidad de combustible

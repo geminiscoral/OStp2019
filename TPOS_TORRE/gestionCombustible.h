@@ -10,7 +10,7 @@
 #include "aviones.h"
 #include "listaAviones.h"
 
-/********************************************!
+/******************************************//**
 ** TAD: gestionarCombustibleRegistrados
 **Gestion Combustible, es este TAD gestinaremos
 **el uso del combustible, utilizando una funcion secundaria

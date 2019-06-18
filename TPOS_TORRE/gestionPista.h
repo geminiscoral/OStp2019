@@ -3,7 +3,7 @@
 
 #include "listaAviones.h"
 
-/********************************************!
+/******************************************//**
 ** TAD: gestionPista
 **En este TAD gestionaremos las colas de los aviones, y ademas
 **la solicitud de pista que envien los aviones

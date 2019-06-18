@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1560801909 source:/home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/avion.c
+1560872150 source:/home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/avion.c
 	"avion.h"
 	<stdlib.h>
 	<string.h>
@@ -7,7 +7,7 @@
 	<arpa/inet.h>
 	<sys/socket.h>
 
-1560803394 /home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/avion.h
+1560871889 /home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/avion.h
 
 1560506742 source:/home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/mainAvion.c
 	<stdlib.h>

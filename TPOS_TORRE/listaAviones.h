@@ -3,7 +3,7 @@
 
 #include "aviones.h"
 
-/********************************************!
+/******************************************//**
 ** TAD: listaAviones
 **En este TAD gestionaremos las listas de los aviones
 
@@ -33,7 +33,7 @@
 
 
 
-/*******************************!
+/*****************************//**
 *@struct ST_LISTAAVIONES
 *@struct struct listaAviones * ste
 **Estructura para listar a los aviones
@@ -44,7 +44,7 @@ typedef struct listaAviones {
 }ST_LISTAAVIONES;
 
 
-/*******************************!
+/*****************************//**
 *@struct ST_COLA
 **estructura para una cola
 ********************************/
@@ -54,7 +54,7 @@ typedef struct {
 }ST_COLA;
 
 
-/*******************************!
+/*****************************//**
 *@struct ST_TODASLASLISTAS
 **Esta estructura reune las listas de los
 aviones registrados, la lista de los aviones que

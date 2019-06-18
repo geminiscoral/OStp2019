@@ -5,7 +5,7 @@
 #include "aviones.h"
 #define longMensajeEnviado 2
 
-/********************************************!
+/******************************************//**
 *@fn  strtoi
 combierte una cifra entera en un char
 *@param int N
@@ -18,7 +18,7 @@ combierte una cifra entera en un char
     }
 
 
-/********************************************!
+/******************************************//**
 *@fn  * enteroACadena
 combierte un valor entero en una cadena
 *@param int valor
@@ -47,7 +47,7 @@ combierte un valor entero en una cadena
         return cadena;
     }
 
-/********************************************!
+/******************************************//**
 *@fn  registrarAvion
 **registra un nuevo avion y modifica su estado,
 **pasa de estado h(en hangar) a g(listo/hangar)
@@ -60,7 +60,7 @@ combierte un valor entero en una cadena
     }
 
 
-/********************************************!
+/******************************************//**
 *@fn  enviarMensaje
 **Segun la opcion ingresada por teclado, la fn envia un mensaje
 **a un cliente que se pasara por parametro.

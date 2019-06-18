@@ -10,7 +10,7 @@
 #define tamanioBufferMensaje 100
 
 
-/********************************************!
+/******************************************//**
 *@fn  recibirMensajeAterrizajeYDespegue
 **
 *@param int cliente
@@ -45,7 +45,7 @@ void recibirMensajeAterrizajeYDespegue (int cliente){
         }
 
 
-/********************************************!
+/******************************************//**
 *@fn  aunarListas
 *@param c1 {ST_TODASLASLISTAS} * todasLasListas
 *@param c2 {int} * cliente
@@ -54,8 +54,6 @@ void recibirMensajeAterrizajeYDespegue (int cliente){
 *@param c5 {ST_LISTAAVIONES} * listaAterrizaje
 *@param c6 {ST_COLA} * colaDespegue
 ********************************************/
-
-
 void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue){
         todasLasListas->avionesRegistrados = avionesRegistrados;
         todasLasListas->listaAterrizaje = listaAterrizaje;
@@ -65,7 +63,7 @@ void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDRes
 }
 
 
-/********************************************!
+/******************************************//**
 *@fn  despegueAvion
 **utilizando la fn sleep, dormiremos el proceso 25 segundos, simulando
 **el despegue del avion, una vez finalizado, mandaremos un mensaje al usuario
@@ -80,7 +78,7 @@ void despegueAvion (int ID){
 
 
 
-/********************************************!
+/******************************************//**
 *@fn  aterrizajeAvion
 **utilizando la funcion sleep, dormiremos el proceso 25 segundos, simulando
 **el proceso de aterrizaje del avion, una vez finalizado, mandaremos un mensaje al usuario
@@ -94,7 +92,7 @@ void aterrizajeAvion (int ID){
 }
 
 
-/********************************************!
+/******************************************//**
 *@fn gestionarPista
 **Los aviones pueden solicitar pista para aterrizar.
 **Ademas gestinara el avance de la cola de espera de los aviones que esteen por despegar.

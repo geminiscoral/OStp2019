@@ -10,7 +10,7 @@
 #include "listaAviones.h"
 #include "gestionCombustible.h"
 
-/********************************************!
+/******************************************//**
 *@fn  gestionarCombustibleRegistrados
 **Esta fn verifica, si hay un avion con su estado 'v'(en vuelo)
 **utiliza la fn restarCombustible, para restarle unidades al combustible del avion.

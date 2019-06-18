@@ -11,7 +11,7 @@
 #include "gestionCombustibleAterrizando.h"
 
 
-/********************************************!
+/******************************************//**
 *@fn  gestionarCombustibleAterrizando
 **Esta fn busca todos los aviones que se encuentren en estado
 **aterrizando (utiliza la lista de aterrizando) para utilizar la

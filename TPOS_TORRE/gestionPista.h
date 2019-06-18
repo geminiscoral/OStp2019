@@ -22,8 +22,6 @@ cliente, ID,
 *<void aunarListas> <(ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue)>
 *******************************************/
 
-
-
 void gestionarPista (ST_TODASLASLISTAS * todasLasListas);
 
 void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue);

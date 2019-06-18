@@ -11,7 +11,7 @@
 
 /*******************************!
 *@fn restarCombustible
-** esta funcion resta en dos unidades el conbusible actual de un avion y lo actualiza.
+** Esta funcion resta en dos unidades el combustible actual de un avion y lo actualiza.
 *@param ST_TODASLASLISTAS *ListasAviones
 ********************************/
 
@@ -19,5 +19,4 @@ void restarCombustible(ST_LISTAAVIONES *subLista){
     int combustibleActual= subLista->avion.cantCombustible;
     combustibleActual=(combustibleActual-2);
     subLista->avion.cantCombustible=combustibleActual;
-    return;
 }

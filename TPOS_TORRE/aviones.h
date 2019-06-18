@@ -1,7 +1,6 @@
 #ifndef AVIONES_H_INCLUDED
 #define AVIONES_H_INCLUDED
 
-
 /********************************************!
 ** TAD: aviones
 **este TAD se encargara del envio de mensajes de los aviones
@@ -22,14 +21,10 @@ N, valor, opcion, cliente
 <void registrarAvion> <(ST_AVION * avion)>
 *******************************************/
 
-
-
-
 /*******************************!
 *@struct ST_AVION
 **Esta estructura define las caracteristicas de un avion
 ********************************/
-
 
 typedef struct {
     int cliente;

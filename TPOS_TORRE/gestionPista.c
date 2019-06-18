@@ -12,41 +12,42 @@
 
 /********************************************!
 *@fn  recibirMensajeAterrizajeYDespegue
-**
+**confirma la recepcion de la solicitud de
+**aterrizaje y despegue
 *@param int cliente
 ********************************************/
 void recibirMensajeAterrizajeYDespegue (int cliente){
-            ST_AVION * avion = (ST_AVION*)malloc(sizeof(ST_AVION));
-            char * bufferMensaje = (char*)malloc(tamanioBufferMensaje);
-            int bytesRecibidos = recv(cliente, bufferMensaje, tamanioBufferMensaje, 0);
-            if (bytesRecibidos <= 0) {
-                perror("El chabón se desconectó o bla.");
-                }
-            printf("Mensaje: %s \n", bufferMensaje);
-            strtok(bufferMensaje, ";");
-            strtok(NULL, ";");
-            strtok(NULL, ";");
-            char id [longID];
-            strcpy(id,strtok(NULL,";"));
-            avion->id = atoi(id);
-            char opcion;
-            strcpy(&opcion,strtok(NULL, ";"));
-            int Opcion = atoi (&opcion);
-            switch (Opcion){
-                case 3:
-                free(avion);
-                printf ("\n Se recibiò la orden para despegar\n");
-                break;
-                case 4:
-                free(avion);
-                printf ("\n Se recibiò la orden para aterrizar\n");
-                break;
-            }
-        }
-
+    ST_AVION * avion = (ST_AVION*)malloc(sizeof(ST_AVION));
+    char * bufferMensaje = (char*)malloc(tamanioBufferMensaje);
+    int bytesRecibidos = recv(cliente, bufferMensaje, tamanioBufferMensaje, 0);
+    if (bytesRecibidos <= 0) {
+        perror("El cliente se desconecto u ocurrio un error.");
+    }
+    printf("Mensaje: %s \n", bufferMensaje);
+    strtok(bufferMensaje, ";");
+    strtok(NULL, ";");
+    strtok(NULL, ";");
+    char id [longID];
+    strcpy(id,strtok(NULL,";"));
+    avion->id = atoi(id);
+    char opcion;
+    strcpy(&opcion,strtok(NULL, ";"));
+    int Opcion = atoi (&opcion);
+    switch (Opcion){
+        case 3:
+            free(avion);
+            printf ("\n Se recibiò la orden para despegar\n");
+        break;
+        case 4:
+            free(avion);
+            printf ("\n Se recibiò la orden para aterrizar\n");
+        break;
+    }
+    }
 
 /********************************************!
 *@fn  aunarListas
+*
 *@param c1 {ST_TODASLASLISTAS} * todasLasListas
 *@param c2 {int} * cliente
 *@param c3 {int} * IDReservaPista
@@ -54,8 +55,6 @@ void recibirMensajeAterrizajeYDespegue (int cliente){
 *@param c5 {ST_LISTAAVIONES} * listaAterrizaje
 *@param c6 {ST_COLA} * colaDespegue
 ********************************************/
-
-
 void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue){
         todasLasListas->avionesRegistrados = avionesRegistrados;
         todasLasListas->listaAterrizaje = listaAterrizaje;
@@ -64,12 +63,11 @@ void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDRes
         todasLasListas->reservapista = *IDReservaPista;
 }
 
-
 /********************************************!
 *@fn  despegueAvion
-**utilizando la fn sleep, dormiremos el proceso 25 segundos, simulando
-**el despegue del avion, una vez finalizado, mandaremos un mensaje al usuario
-** indicandole que el avion quedo en vuelo.
+**suspende el proceso el tiempo especificado, simulando el tiempo
+**de despegue del avion, una vez finalizado, imprime un mensaje
+** indicando que el avion quedo en vuelo.
 *@param c1 int ID
 ********************************************/
 void despegueAvion (int ID){
@@ -78,13 +76,11 @@ void despegueAvion (int ID){
         printf("Avion %i en vuelo ✈ \n", ID);
 }
 
-
-
 /********************************************!
 *@fn  aterrizajeAvion
-**utilizando la funcion sleep, dormiremos el proceso 25 segundos, simulando
-**el proceso de aterrizaje del avion, una vez finalizado, mandaremos un mensaje al usuario
-** indicandole que el avion aterrizo.
+**suspende el proceso 25 segundos, simulando el tiempo de
+**aterrizaje del avion, una vez finalizado, imprime un mensaje
+** indicando que el avion aterrizo.
 *@param c1 int ID
 ********************************************/
 void aterrizajeAvion (int ID){
@@ -93,11 +89,10 @@ void aterrizajeAvion (int ID){
         printf("Avion %i en hangar ✈ \n", ID);
 }
 
-
 /********************************************!
 *@fn gestionarPista
 **Los aviones pueden solicitar pista para aterrizar.
-**Ademas gestinara el avance de la cola de espera de los aviones que esteen por despegar.
+**gestionara el avance de la cola de espera de los aviones que esten para despegar.
 *@param c1 ST_TODASLASLISTAS * todasLasListas
 ********************************************/
 void gestionarPista (ST_TODASLASLISTAS * todasLasListas){
@@ -105,7 +100,6 @@ void gestionarPista (ST_TODASLASLISTAS * todasLasListas){
         while (todasLasListas->listaAterrizaje!=NULL){
             ST_LISTAAVIONES * aux = todasLasListas->listaAterrizaje;
             enviarMensaje(aux->avion.cliente, 1);
-
 
             //todasLasListas->reservapista = aux->avion.id;
             while (todasLasListas->reservapista != aux->avion.id){
@@ -128,7 +122,6 @@ void gestionarPista (ST_TODASLASLISTAS * todasLasListas){
             ST_LISTAAVIONES *aux = todasLasListas->colaDespegue->cabecera;
             enviarMensaje(aux->avion.cliente, 1);
 
-
             //todasLasListas->reservapista = aux->avion.id;
             while (todasLasListas->reservapista != aux->avion.id){
                 sleep (1);
@@ -148,5 +141,3 @@ void gestionarPista (ST_TODASLASLISTAS * todasLasListas){
         }
     }
 }
-
-

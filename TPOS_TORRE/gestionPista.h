@@ -26,11 +26,10 @@ void gestionarPista (ST_TODASLASLISTAS * todasLasListas);
 
 void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue);
 
-//se realizo prueva de compilacion y no genera errores, pero las marcamos en comentario para verificar su uso.
-/*void recibirMensajeAterrizajeYDespegue (int cliente);*/
+void recibirMensajeAterrizajeYDespegue (int cliente);
 
-/*void despegueAvion (int ID);*/
+void despegueAvion (int ID);
 
-/*void aterrizajeAvion (int ID)*/
+void aterrizajeAvion (int ID);
 
 #endif // GESTIONPISTA_H_INCLUDED

@@ -5,7 +5,6 @@
 #include <stdio.h>
 #define tamanioBufferMensaje 100
 
-
 /******************************************//**
 *@fn conectar
 **se realiza coneccion del avión con el aeropuerto

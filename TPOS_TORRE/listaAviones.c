@@ -47,7 +47,7 @@ void crearCola(ST_COLA * cola){
 //4
 /******************************************//**
 *@fn agregarACola
-**Crea nodo para agregar a la cola
+**Agregar a la cola
 *@param ST_COLA *cola
 *@param ST_AVION *avion
 ********************************************/
@@ -243,20 +243,9 @@ void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, 
 }
 
 //12
-/******************************************//**
-*@fn aterrizar
-**
-*@param c1 int * IDReservaPista
-*@param c2 int * cliente
-*@param c3 ST_AVION * avion
-********************************************/
-void aterrizar (int * IDReservaPista, int * cliente, ST_AVION * avion){
-        if (avion->id == *IDReservaPista){
 
-        }
-}
 
-//13
+//12
 /******************************************//**
 *@fn recibirMensaje
 **recibe los datos del cliente (avion) y sigue la opcion recibida

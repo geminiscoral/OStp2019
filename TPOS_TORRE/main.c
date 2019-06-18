@@ -37,7 +37,7 @@ int main(void) {
 
 
     //------------------------------
-
+//creacion de listas y colas
 	ST_LISTAAVIONES * listaAvion;
 	crearLista(&listaAvion);
     ST_LISTAAVIONES * colaAterrizar;
@@ -45,12 +45,13 @@ int main(void) {
     ST_COLA colaDespegar;
     crearCola(&colaDespegar);
     ST_TODASLASLISTAS todasLasListas;
-
+////////////////////////////////
     int IDReservaPista = 0;
     int cliente = 0;
 
     aunarListas(&todasLasListas,&cliente, &IDReservaPista, listaAvion, colaAterrizar, &colaDespegar);
 
+//Iniciacion de hilos
     pthread_t gestionPista;
 
     pthread_create(&gestionPista, NULL, (void*)gestionarPista, (void*)&todasLasListas);
@@ -62,7 +63,7 @@ int main(void) {
 
     pthread_t gestionCombustibleAterrizando;
     pthread_create(&gestionCombustibleAterrizando, NULL, (void*)gestionarCombustibleAterrizando, (void*)&todasLasListas);
-
+//////////////////////////////////////7777
 
     while (1){
 

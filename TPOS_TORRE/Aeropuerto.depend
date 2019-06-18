@@ -320,7 +320,7 @@
 	<string.h>
 	"aviones.h"
 
-1560872839 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/aviones.h
+1560887897 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/aviones.h
 
 1560872558 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustible.c
 	<stdlib.h>
@@ -335,7 +335,7 @@
 	"listaAviones.h"
 	"gestionCombustible.h"
 
-1560872932 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/listaAviones.h
+1560887896 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/listaAviones.h
 	"aviones.h"
 
 1560872558 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionCombustible.h
@@ -386,10 +386,10 @@
 	<string.h>
 	"gestionPista.h"
 
-1560872558 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionPista.h
+1560887895 /home/geminis2/Escritorio/OStp2019/TPOS_TORRE/gestionPista.h
 	"listaAviones.h"
 
-1560873085 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/listaAviones.c
+1560887896 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/listaAviones.c
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>
@@ -398,7 +398,7 @@
 	<sys/socket.h>
 	<string.h>
 
-1560870942 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/main.c
+1560890416 source:/home/geminis2/Escritorio/OStp2019/TPOS_TORRE/main.c
 	<stdlib.h>
 	<stdio.h>
 	<stdint.h>

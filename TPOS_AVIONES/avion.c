@@ -217,7 +217,6 @@ void parsearTextoParametro (const char * argv1, char * IP, char* strPuerto, int 
                 free(bufferRecibido);
         }
 
-
 /*****************************************//**
 *@fn  mostrarEstadoAvion
 **muestra las caracteristicas del avion actual
@@ -229,6 +228,4 @@ void mostrarEstadoAvion (ST_AVION *avion){
     printf("\nEl ID del avion es %s\n", avion->id);
     printf("\nEl estado del avion es %c\n", avion->estado);
     printf("\nLa cantidad de combustible del avion es %i\n", avion->cantCombustible);
-
 }
-

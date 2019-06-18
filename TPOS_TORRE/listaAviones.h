@@ -103,8 +103,8 @@ void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion);
 //11
 void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, ST_AVION * avion);
 
-//12        ------FALTA-------
-/*void aterrizar (int * IDReservaPista, int * cliente, ST_AVION * avion)*/
+//12
+void aterrizar (int * IDReservaPista, int * cliente, ST_AVION * avion);
 
 //13
 void recibirMensaje (ST_TODASLASLISTAS * todasLasListas);

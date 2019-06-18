@@ -17,7 +17,7 @@
 	"consola.h"
 	"avion.h"
 
-1560871995 /home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/consola.h
+1560886798 /home/geminis2/Escritorio/OStp2019/TPOS_AVIONES/consola.h
 	"avion.h"
 	<arpa/inet.h>
 	<sys/socket.h>

@@ -12,10 +12,10 @@
 
 /******************************************//**
 ** TAD: gestionarCombustibleRegistrados
-**Gestion Combustible, es este TAD gestinaremos
-**el uso del combustible, utilizando una funcion secundaria
+**Gestion Combustible, en este TAD gestinaremos el uso del combustible
+**de los aviones que se encuentran en vuelo, utilizando una funcion secundaria
 **para restar el combustible a los aviones. Ademas utilizaremos la
-**funcion sleep para dormir el proceso.
+**funcion sleep para dormir el proceso un tiempo determinado.
 
 **CONJUNTOS DE DATOS:
 **----------Estructuras-----------:

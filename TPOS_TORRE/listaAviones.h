@@ -90,12 +90,10 @@ void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION avion);
 
 void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, ST_AVION * avion);
 
-
 //1
 void crearLista (ST_LISTAAVIONES**cabecera);
 
-//2  ------FALTA-------
-/*ST_LISTAAVIONES * crearNodo (ST_AVION * avion);*/
+ST_LISTAAVIONES * crearNodo (ST_AVION * avion);*/
 
 //3
 void crearCola(ST_COLA * cola);

@@ -7,7 +7,7 @@
 
 /******************************************//**
 *@fn  strtoi
-combierte una cifra entera en un char
+convierte un numero entero en un char
 *@param int N
 *@return una variable char
 ********************************************/
@@ -20,7 +20,7 @@ combierte una cifra entera en un char
 
 /******************************************//**
 *@fn  * enteroACadena
-combierte un valor entero en una cadena
+convierte un valor entero en una cadena
 *@param int valor
 *@param char *cadena
 *@return cadena
@@ -49,7 +49,7 @@ combierte un valor entero en una cadena
 
 /******************************************//**
 *@fn  registrarAvion
-**registra un nuevo avion y modifica su estado,
+**registra un nuevo avion modificando su estado,
 **pasa de estado h(en hangar) a g(listo/hangar)
 *@param ST_AVION *avion
 ********************************************/
@@ -63,7 +63,7 @@ combierte un valor entero en una cadena
 /******************************************//**
 *@fn  enviarMensaje
 **Segun la opcion ingresada por teclado, la fn envia un mensaje
-**a un cliente que se pasara por parametro.
+**al cliente que se pasara por parametro.
 *@param int cliente
 *@param int opcion
 ********************************************/

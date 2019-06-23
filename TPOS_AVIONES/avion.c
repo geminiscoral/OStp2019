@@ -285,7 +285,7 @@ void solicitarPista (int cliente, char * IP, char * puerto, ST_AVION * avion){
         send(cliente, msj2, tamanioBufferMensaje, 0);
         free (msj2);
         enviarCombustible(cliente, IP, puerto, avion);
-        while ((avion->estado=='g')||(avion->estado=='v')){
+        if ((avion->estado=='g')||(avion->estado=='v')){
             mostrarEstadoAvion(avion);
             recibirMensaje(cliente, SOLICITUDDEPISTA, avion);
             //system ("clear");

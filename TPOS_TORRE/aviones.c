@@ -5,26 +5,25 @@
 #include "aviones.h"
 #define longMensajeEnviado 2
 
-/******************************************//**
-*@fn  strtoi
-convierte un numero entero en un char
-*@param int N
-*@return una variable char
-********************************************/
+/**
+    *@fn  char strtoi
+    * convierte un numero entero en un char
+    *@param int N
+    *@return una variable char
+*/
    char strtoi (int N){
         char salida;
         salida = N + 48;
         return salida;
     }
 
-
-/******************************************//**
-*@fn  * enteroACadena
-convierte un valor entero en una cadena
-*@param int valor
-*@param char *cadena
-*@return cadena
-********************************************/
+/**
+    *@fn  char * enteroACadena
+    convierte un valor entero en una cadena
+    *@param int valor
+    *@param char *cadena
+    *@return cadena
+*/
     char * enteroACadena (int valor, char * cadena){
         int cont = 0;
         char cad [10];
@@ -46,27 +45,24 @@ convierte un valor entero en una cadena
         strcpy(cadena,cad);
         return cadena;
     }
-
-/******************************************//**
-*@fn  registrarAvion
-**registra un nuevo avion modificando su estado,
-**pasa de estado h(en hangar) a g(listo/hangar)
-*@param ST_AVION *avion
-********************************************/
+/**
+    *@fn  registrarAvion
+    *registra un nuevo avion modificando su estado,
+    pasa de estado h(en hangar) a g(listo/hangar)
+    *@param ST_AVION *avion
+*/
     void registrarAvion (ST_AVION * avion){
             if (avion->estado == 'h'){
                     avion->estado = 'g';
             }
     }
-
-
-/******************************************//**
-*@fn  enviarMensaje
-**Segun la opcion ingresada por teclado, la fn envia un mensaje
-**al cliente que se pasara por parametro.
-*@param int cliente
-*@param int opcion
-********************************************/
+/**
+    *@fn void enviarMensaje
+    *Segun la opcion ingresada por teclado, la fn envia un mensaje
+    al cliente que se pasara por parametro.
+    *@param int cliente
+    *@param int opcion
+*/
     void enviarMensaje (int cliente, int opcion){
             switch(opcion){
                 case 0: // La solicitud se proceso exitosamente

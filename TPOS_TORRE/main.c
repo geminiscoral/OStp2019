@@ -8,11 +8,7 @@
 #include "aviones.h"
 #include "listaAviones.h"
 #include "gestionPista.h"
-
-#include "gestionCombustibleAterrizando.h"
-#include "gestionCombustible.h"
 #define tamanioBufferMensaje 100
-
 
 
 int main(void) {
@@ -36,8 +32,9 @@ int main(void) {
     listen(servidor, 100);
 
 
+
     //------------------------------
-//creacion de listas y colas
+
 	ST_LISTAAVIONES * listaAvion;
 	crearLista(&listaAvion);
     ST_LISTAAVIONES * colaAterrizar;
@@ -45,25 +42,16 @@ int main(void) {
     ST_COLA colaDespegar;
     crearCola(&colaDespegar);
     ST_TODASLASLISTAS todasLasListas;
-////////////////////////////////
+
     int IDReservaPista = 0;
     int cliente = 0;
 
     aunarListas(&todasLasListas,&cliente, &IDReservaPista, listaAvion, colaAterrizar, &colaDespegar);
 
-//Iniciacion de hilos
     pthread_t gestionPista;
 
     pthread_create(&gestionPista, NULL, (void*)gestionarPista, (void*)&todasLasListas);
 
-    pthread_create(&gestionPista, NULL, (void*)gestionarPista, (void*)&todasLasListas);
-
-    pthread_t gestionCombustible;
-    pthread_create(&gestionCombustible, NULL, (void*)gestionarCombustibleRegistrados, (void*)&todasLasListas);
-
-    pthread_t gestionCombustibleAterrizando;
-    pthread_create(&gestionCombustibleAterrizando, NULL, (void*)gestionarCombustibleAterrizando, (void*)&todasLasListas);
-//////////////////////////////////////7777
 
     while (1){
 

@@ -31,3 +31,9 @@ void gestionarCombustibleRegistrados(ST_TODASLASLISTAS *todasLasListas){
     }
     return;
 }
+
+void restarCombustible(ST_LISTAAVIONES *subLista){
+    int combustibleActual= subLista->avion.cantCombustible;
+    combustibleActual=(combustibleActual-2);
+    subLista->avion.cantCombustible=combustibleActual;
+}

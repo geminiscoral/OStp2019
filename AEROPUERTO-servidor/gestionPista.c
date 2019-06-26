@@ -11,16 +11,16 @@
 #define esperaAterrizaje 15
 #define esperaDespegue 15
 
-/******************************************//**
+/**
 *@fn  aunarListas
 *
-*@param c1 {ST_TODASLASLISTAS} * todasLasListas
+*@param c1 ST_TODASLASLISTAS} * todasLasListas
 *@param c2 {int} * cliente
 *@param c3 {int} * IDReservaPista
 *@param c4 {ST_LISTAAVIONES} * avionesRegistrados
 *@param c5 {ST_LISTAAVIONES} * listaAterrizaje
 *@param c6 {ST_COLA} * colaDespegue
-********************************************/
+*/
 void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue){
         todasLasListas->avionesRegistrados = avionesRegistrados;
         todasLasListas->listaAterrizaje = listaAterrizaje;

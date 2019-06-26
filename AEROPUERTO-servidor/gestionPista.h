@@ -3,10 +3,12 @@
 
 #include "listaAviones.h"
 
-/**
+
+
+/******************************************//**
 ** TAD: gestionPista
-*En este TAD gestionaremos las colas de los aviones, y ademas
-la solicitud de pista que envien los aviones
+**En este TAD gestionaremos las colas de los aviones, y ademas
+**la solicitud de pista que envien los aviones
 
 **CONJUNTOS DE DATOS:
 **----------EStructuras-----------:
@@ -18,13 +20,9 @@ cliente, ID,
 * avionesRegistrados, * listaAterrizaje, * colaDespegue
 
 **OPERACIONES:
-
-Funcion: gestionarPista
-Parametro: ST_TODASLASLISTAS * todasLasListas)>
-
-Funcion: void aunarListas
-Parametros: ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue)>
-*/
+*<gestionarPista> <(ST_TODASLASLISTAS * todasLasListas)>
+*<void aunarListas> <(ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDReservaPista, ST_LISTAAVIONES * avionesRegistrados, ST_LISTAAVIONES * listaAterrizaje, ST_COLA * colaDespegue)>
+*******************************************/
 
 void gestionarPista (ST_TODASLASLISTAS * todasLasListas);
 

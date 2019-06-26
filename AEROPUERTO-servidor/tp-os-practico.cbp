@@ -2,20 +2,29 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Aeropuerto" />
+		<Option title="tp-os-practico" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Aeropuerto" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/tp-os-practico" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/tp-os-practico" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
 				<Linker>
-					<Add library="pthread" />
+					<Add option="-s" />
 				</Linker>
 			</Target>
 		</Build>
@@ -26,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="aviones.h" />
+		<Unit filename="consola.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="consola.h" />
 		<Unit filename="gestionPista.c">
 			<Option compilerVar="CC" />
 		</Unit>

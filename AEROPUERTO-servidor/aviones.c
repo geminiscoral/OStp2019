@@ -5,25 +5,15 @@
 #include "aviones.h"
 #define longMensajeEnviado 2
 
-/**
-    *@fn  char strtoi
-    * convierte un numero entero en un char
-    *@param int N
-    *@return una variable char
-*/
+
+
    char strtoi (int N){
         char salida;
         salida = N + 48;
         return salida;
     }
 
-/**
-    *@fn  char * enteroACadena
-    convierte un valor entero en una cadena
-    *@param int valor
-    *@param char *cadena
-    *@return cadena
-*/
+
     char * enteroACadena (int valor, char * cadena){
         int cont = 0;
         char cad [10];
@@ -45,31 +35,20 @@
         strcpy(cadena,cad);
         return cadena;
     }
-/**
-    *@fn  registrarAvion
-    *registra un nuevo avion modificando su estado,
-    pasa de estado h(en hangar) a g(listo/hangar)
-    *@param ST_AVION *avion
-*/
+
     void registrarAvion (ST_AVION * avion){
             if (avion->estado == 'h'){
                     avion->estado = 'g';
             }
     }
-/**
-    *@fn void enviarMensaje
-    *Segun la opcion ingresada por teclado, la fn envia un mensaje
-    al cliente que se pasara por parametro.
-    *@param int cliente
-    *@param int opcion
-*/
+
     void enviarMensaje (int cliente, int opcion){
             switch(opcion){
                 case 0: // La solicitud se proceso exitosamente
                     send(cliente, "0", longMensajeEnviado, 0);
                 break;
-                case 1: // La pista fue cedida a cliente
-                    send(cliente, "1", longMensajeEnviado, 0);
+                case 2: // La pista fue cedida a cliente
+                    send(cliente, "2", longMensajeEnviado, 0);
                 break;
                 case 3: // El avion despego
                     send(cliente, "3", longMensajeEnviado, 0);
@@ -78,4 +57,30 @@
                     send(cliente, "4", longMensajeEnviado, 0);
                 break;
             }
+    }
+
+    void mostrarEstadoDeAvion (ST_AVION * avion){
+        switch(avion->estado){
+                case 'h':
+                    printf("'En Hangar'\n");
+                break;
+                case 'g':
+                    printf(" 'Listo/Hangar'\n");
+                break;
+                case 'l':
+                    printf(" 'Listo/Despegar'\n");
+                break;
+                case 'd':
+                    printf(" 'Despegando'\n");
+                break;
+                case 'v':
+                    printf(" 'En Vuelo'\n");
+                break;
+                case 'e':
+                    printf(" 'Espera/Aterrizar'\n");
+                break;
+                case 'a':
+                    printf(" 'Aterrizando'\n");
+                break;
+        }
     }

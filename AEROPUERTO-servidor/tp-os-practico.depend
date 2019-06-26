@@ -95,9 +95,18 @@
 	<sys/socket.h>
 	<string.h>
 
-1561515327 source:/home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/main.c
-	<stdio.h>
+1561588181 source:/home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/main.c
 	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
+	"listaAviones.h"
+	"gestionPista.h"
+	"consola.h"
 
 1561583402 source:/home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/aviones.c
 	<stdlib.h>

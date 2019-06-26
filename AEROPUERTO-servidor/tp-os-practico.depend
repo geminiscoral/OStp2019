@@ -57,3 +57,52 @@
 	"gestionPista.h"
 	"consola.h"
 
+1561506539 source:/home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/consola.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	"consola.h"
+
+1561506532 /home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/consola.h
+	"gestionPista.h"
+
+1561506524 /home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/gestionPista.h
+	"listaAviones.h"
+
+1561506493 /home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/listaAviones.h
+	"aviones.h"
+
+1561506541 /home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/aviones.h
+
+1561506530 source:/home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/gestionPista.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	"gestionPista.h"
+
+1561506522 source:/home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/listaAviones.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	"listaAviones.h"
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+
+1561515327 source:/home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1561583402 source:/home/geminis/Escritorio/tp-os-practico/OStp2019/AEROPUERTO-servidor/aviones.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+	"aviones.h"
+

@@ -31,23 +31,23 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="../aviones.c">
+		<Unit filename="aviones.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../aviones.h" />
-		<Unit filename="../consola.c">
+		<Unit filename="aviones.h" />
+		<Unit filename="consola.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../consola.h" />
-		<Unit filename="../gestionPista.c">
+		<Unit filename="consola.h" />
+		<Unit filename="gestionPista.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../gestionPista.h" />
-		<Unit filename="../listaAviones.c">
+		<Unit filename="gestionPista.h" />
+		<Unit filename="listaAviones.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../listaAviones.h" />
-		<Unit filename="../main.c">
+		<Unit filename="listaAviones.h" />
+		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

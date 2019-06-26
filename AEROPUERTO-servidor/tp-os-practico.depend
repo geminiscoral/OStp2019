@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1561515084 source:/home/geminis/Escritorio/aviones.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+	"aviones.h"
+
+1561506541 /home/geminis/Escritorio/aviones.h
+
+1561506539 source:/home/geminis/Escritorio/consola.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	"consola.h"
+
+1561506532 /home/geminis/Escritorio/consola.h
+	"gestionPista.h"
+
+1561506524 /home/geminis/Escritorio/gestionPista.h
+	"listaAviones.h"
+
+1561506493 /home/geminis/Escritorio/listaAviones.h
+	"aviones.h"
+
+1561515129 source:/home/geminis/Escritorio/gestionPista.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	"gestionPista.h"
+
+1561506522 source:/home/geminis/Escritorio/listaAviones.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	"listaAviones.h"
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+
+1561506491 source:/home/geminis/Escritorio/main.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<string.h>
+	<pthread.h>
+	"aviones.h"
+	"listaAviones.h"
+	"gestionPista.h"
+	"consola.h"
+

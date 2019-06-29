@@ -1,26 +1,60 @@
 #ifndef AVION_H_INCLUDED
 #define AVION_H_INCLUDED
 
-/******************************************//**
-** TAD: avion
-**En este TAD, nos encargaremos de la recepción y envío de mensajes de los aviones
+/**
+                    *DESCRIPCION
+*TAD: avion
+*En este TAD, nos encargaremos de la recepción y envío de mensajes de los aviones
 a la torre de control. Además de la creación de un avión.
 
-**CONJUNTOS DE DATOS:
-**----------Estructuras-----------:
+                    *CONJUNTOS DE DATOS:
+*Estructuras
 ST_AVION,
-**----------Variables-------------:
-charOpcion, cliente, N,
-**----------Punteros--------------:
+*Variables
+charOpcion, cliente, N.
+
+*Punteros
 * argv1, * IP, * strPuerto, * ID, * modelo, * cantMaxComb, *avion, * puerto, * avion,
-**OPERACIONES:
-**1--<void parsearTextoParametro>  <(const char * argv1, char * IP, char* strPuerto, int * puerto, char * ID, char * modelo, int * cantMaxComb )>
-**2--<void crearAvion>  <(ST_AVION * avion)>
-**3--<void mostrarEstadoAvion>  <(ST_AVION *avion)>
-**4<char * armarMensaje>  <(int cliente, char * IP, char * puerto, ST_AVION * avion, int charOpcion)>
-**5<int recibirMensaje>  <(int cliente, int opcion, ST_AVION * avion, int * pistaAsignada)>
-**6<char strtoi>  <(int N)>;
-*******************************************/
+
+                        *OPERACIONES:
+
+*Funcion: void parsearTextoParametro
+*Parametros: const char * argv1, char * IP, char* strPuerto, int * puerto, char * ID, char * modelo, int * cantMaxComb
+
+*Funcion: void crearAvion
+*ParametrosST_AVION * avion
+
+*Funcion: void mostrarEstadoAvion
+*Parametros:ST_AVION *avion
+
+*Funcion: char * armarMensaje
+*Parametros: int cliente, char * IP, char * puerto, ST_AVION * avion, int charOpcion
+
+*Funcion: int recibirMensaje
+*Parametros: int cliente, int opcion, ST_AVION * avion, int * pistaAsignada
+
+*Funcion: char strtoi
+*Parametros; int N
+
+*Funcion: void registracion
+*Parametros: int cliente, char * IP, char * puerto, ST_AVION * avion
+
+*Funcion: void solicitarPista
+*Parametros: int cliente, char * IP, char * puerto, ST_AVION * avion
+
+*Funcion: void despegar
+*Parametros: int cliente, char * IP, char * puerto, ST_AVION * avion
+
+*Funcion: void aterrizar
+*Parametros: int cliente, char * IP, char * puerto, ST_AVION * avion
+
+*Funcion: void restarCombustible
+*Parametros: ST_AVION * avion
+
+*Funcion: void enviarCombustible
+*Parametros: int cliente, char * IP, char * puerto, ST_AVION * avion
+
+*/
 
 
 typedef struct {

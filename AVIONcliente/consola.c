@@ -5,13 +5,13 @@
 #include <stdio.h>
 #define tamanioBufferMensaje 100
 
-/******************************************//**
+/**
 *@fn conectar
 **se realiza coneccion del avión con el aeropuerto
 *@param int cliente
 *@param struct sockaddr_in direccionServidor
 *@return 1
-********************************************/
+*/
 int conectar (int cliente, struct sockaddr_in direccionServidor){
         if (connect(cliente, (void*) &direccionServidor, sizeof(direccionServidor)) != 0) {
                 perror("No se pudo conectar");
@@ -19,6 +19,10 @@ int conectar (int cliente, struct sockaddr_in direccionServidor){
             }
 }
 
+/**
+*@fn mostrarOpcionesConsola
+*Genera un menu inicial en la pantalla del terminal
+*/
 void mostrarOpcionesConsola(){
     printf("\n[1] - Registrar avion");
     printf("\n[2] - Solicitar pista");

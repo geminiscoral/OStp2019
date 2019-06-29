@@ -6,23 +6,30 @@
 #include <sys/socket.h>
 
 
-/******************************************//**
-** TAD: consola
+/**
+                    DESCRIPCION
+* TAD: consola
 **Este TAD nos permite abrir un menú de opciones, muestra las característica del avión actual
 
 
-**CONJUNTOS DE DATOS:
-**----------Estructuras-----------:
+                *CONJUNTOS DE DATOS:
+
+*Estructuras
 struct sockaddr_in direccionServidor, ST_AVION
-**----------Variables-------------:
+
+*Variables
  cliente
-**----------Punteros--------------:
+
+*Punteros
 * IP, *puerto, *avion, * pistaAsignada.
 
-**OPERACIONES:
-<void abrirConsola>  <(struct sockaddr_in direccionServidor, int cliente, char * IP, char*puerto, ST_AVION *avion, int * pistaAsignada)>
-<int conectar>  <(int cliente, struct sockaddr_in direccionServidor)>
-*******************************************/
+                        *OPERACIONES:
+
+*Funcion: void abrirConsola
+Parametros: struct sockaddr_in direccionServidor, int cliente, char * IP, char*puerto, ST_AVION *avion
+
+
+*/
 
 void abrirConsola(struct sockaddr_in direccionServidor, int cliente, char * IP, char*puerto, ST_AVION *avion);
 

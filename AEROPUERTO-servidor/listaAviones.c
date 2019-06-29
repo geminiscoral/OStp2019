@@ -9,20 +9,20 @@
 #define tamanioBufferMensaje 100
 #define longCantComb 10
 
-//1
+
 /******************************************//**
 *@fn crearLista
-**Crea una lista apuntando la cabecera a NULL
+*Crea una lista apuntando la cabecera a NULL
 *@param c1 ST_LISTAAVIONES**cabecera
 *******************************************/
 void crearLista (ST_LISTAAVIONES**cabecera){
         *cabecera = NULL;
 }
 
-//2
+
 /******************************************//**
 *@fn ST_LISTAAVIONES *crearNodo
-**Crea un nodo.
+*Crea un nodo.
 *@param ST_AVION *avion
 *@return nodo
 ********************************************/
@@ -32,10 +32,11 @@ ST_LISTAAVIONES * crearNodo (ST_AVION * avion) {
         nodo->ste = NULL;
         return nodo;
 }
-//3
+
+
 /******************************************//**
 *@fn crearCola
-** Crea una cola apuntando tanto la cabecera como el fin a NULL
+*Crea una cola apuntando tanto la cabecera como el fin a NULL
 *@param ST_COLA *cola
 ********************************************/
 void crearCola(ST_COLA * cola){
@@ -43,10 +44,10 @@ void crearCola(ST_COLA * cola){
     cola->fin = NULL;
 }
 
-//4
+
 /******************************************//**
 *@fn agregarACola
-**Crea nodo para agregar a la cola
+*Crea nodo para agregar a la cola
 *@param ST_COLA *cola
 *@param ST_AVION *avion
 ********************************************/
@@ -62,10 +63,10 @@ void agregarACola (ST_COLA * cola, ST_AVION * avion){
     cola->fin = nodo;
 }
 
-//5
+
 /******************************************//**
 *@fn insertarOrdenado
-**inserta un nuevo nodo (avion) a la lista de aviones
+*inserta un nuevo nodo (avion) a la lista de aviones
 *@param c1 ST_LISTAAVIONES**cabecera
 *@param c2 ST_AVION avion
 ********************************************/
@@ -81,10 +82,10 @@ void insertarEnLista (ST_LISTAAVIONES ** cabecera, ST_AVION * avion){
     *cabecera = nodo;
 }
 
-//6
+
 /******************************************//**
 *@fn mostrarLista
-**Muestra las caracteristicas del avion por pantalla
+*Muestra las caracteristicas del avion por pantalla
 *@param ST_LISTAAVIONES**cabecera
 ********************************************/
 void mostrarLista (ST_LISTAAVIONES**cabecera){
@@ -108,17 +109,16 @@ void mostrarLista (ST_LISTAAVIONES**cabecera){
     }
 }
 
-//7
 
-/******************************************//**
+/**
 *@fn ST_LISTAAVIONES * buscarIDEnLista
-**Busca un avion de la lista de aviones
-**por numero de identificacion.
+*Busca un avion de la lista de aviones
+por numero de identificacion.
 *@param c1 int ID
 *@param c2 ST_LISTAAVIONES ** cabecera
 *@return Null si el avion no fue encontrado
 *@return aux con la estructura del avion encontrado
-********************************************/
+*/
 ST_LISTAAVIONES * buscarIDEnLista (int ID, ST_LISTAAVIONES ** cabecera){
     ST_LISTAAVIONES * aux = *cabecera;
 
@@ -128,13 +128,13 @@ ST_LISTAAVIONES * buscarIDEnLista (int ID, ST_LISTAAVIONES ** cabecera){
     return aux;
 }
 
-//8
-/******************************************//**
+
+/**
 *@fn ordenarPorCombustible
 **Ordena la lista de aviones por cantidad de combustible
 *@param c1 ST_LISTAAVIONES ** cabecera
 *@param c2 ST_AVION avion
-********************************************/
+*/
 void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION * avion){
     ST_LISTAAVIONES * busqueda = buscarIDEnLista(avion->id, cabecera);
     if (busqueda!=NULL){
@@ -161,15 +161,15 @@ void ordenarPorCombustible (ST_LISTAAVIONES ** cabecera, ST_AVION * avion){
     }
 }
 
-//9
-/******************************************//**
+
+/**
 *@fn solicitarPista
-**la funcion recibe los datos del avion que socilita utilizar la pista,
-**y lo coloca en la cola de despegar o en la lista de aterrizar segun el caso
+*la funcion recibe los datos del avion que socilita utilizar la pista,
+y lo coloca en la cola de despegar o en la lista de aterrizar segun el caso
 *@param c1 ST_LISTAAVIONES ** listaAterrizar
 *@param c2 ST_COLA * colaDespegar
 *@param c3 ST_AVION * avion
-********************************************/
+*/
 void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, ST_AVION * avion){
         if (avion->estado == 'v'){
             ordenarPorCombustible(listaAterrizar, avion);
@@ -186,15 +186,15 @@ void solicitarPista (ST_LISTAAVIONES ** listaAterrizar, ST_COLA * colaDespegar, 
         }
 }
 
-//10
-/******************************************//**
+
+/**
 *@fn parsearMensaje
-**Recibe un string de datos separados por punto
-**y coma y selecciona dos que son necesarios
-**para el proceso: ID del avion y tipo de mensaje
+*Recibe un string de datos separados por punto
+y coma y selecciona dos que son necesarios
+para el proceso: ID del avion y tipo de mensaje
 *@param c1 char * bufferMensaje
 *@param c2 ST_AVION * avion
-********************************************/
+*/
 int parsearMensaje (char * bufferMensaje, ST_AVION * avion){
             strtok(bufferMensaje, ";");
             strtok(NULL, ";");
@@ -207,13 +207,13 @@ int parsearMensaje (char * bufferMensaje, ST_AVION * avion){
             int Opcion = atoi (&opcion);
             return Opcion;
             }
-//11
-/******************************************//**
+
+/**
 *@fn caracterizarAvion
-**Obtiene de un string de datos serializados,
-**separados por punto y coma, los parametros del avion
+*Obtiene de un string de datos serializados,
+separados por punto y coma, los parametros del avion
 *@param c1 ST_AVION * avion
-********************************************/
+*/
 void caracterizarAvion (ST_AVION * avion){
                 strcpy(avion->modelo,strtok(NULL, ";"));
                 strcpy(&avion->estado,strtok(NULL, ";"));
@@ -225,12 +225,12 @@ void caracterizarAvion (ST_AVION * avion){
                 avion->cantCombustible = atoi (cantComb);
 }
 
-//12
-/******************************************//**
+
+/**
 *@fn recibirMensajeEnHilo
-**recibe los datos del cliente (avion) y sigue la opcion recibida
+*recibe los datos del cliente (avion) y sigue la opcion recibida
 *@param c1 ST_TODASLASLISTAS * todasLasListas
-********************************************/
+*/
 void recibirMensajeEnHilo (ST_TODASLASLISTAS * todasLasListas){
             ST_AVION * avion = (ST_AVION*)malloc(sizeof(ST_AVION));
             char * bufferMensaje = (char*)malloc(tamanioBufferMensaje);
@@ -289,7 +289,10 @@ void recibirMensajeEnHilo (ST_TODASLASLISTAS * todasLasListas){
         }
         free(avion);
     }
-
+/**
+*@fn eliminarAvion
+*@param ST_TODASLASLISTAS * todasLasListas
+*/
     void eliminarAvion (ST_TODASLASLISTAS * todasLasListas){
             int ID = 0;
             printf("\n Ingrese el ID del avion que desea egresar\n");

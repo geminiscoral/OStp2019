@@ -8,13 +8,13 @@
 
 /******************************************//**
 *@fn  abrirConsola
-**Visualiza una consola donde se puede acceder a
-** las listas de aviones y al usuario de la pista
+*Visualiza una consola donde se puede acceder a
+las listas de aviones y al usuario de la pista
 *@param ST_TODASLASLISTAS * todasLasListas
 ********************************************/
 void abrirConsola (ST_TODASLASLISTAS * todasLaslistas){
         int flag = 0;
-        while (flag == 0){
+        while(flag == 0){
             char opcion = "0";
                 printf("\nBievenido al sistema de gestion de la torre de control.\n");
                 printf("[1] - Mostrar lista de aviones registrados\n");

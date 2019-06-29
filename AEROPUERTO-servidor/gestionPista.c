@@ -13,7 +13,6 @@
 
 /**
 *@fn  aunarListas
-*
 *@param c1 ST_TODASLASLISTAS} * todasLasListas
 *@param c2 {int} * cliente
 *@param c3 {int} * IDReservaPista
@@ -28,11 +27,12 @@ void aunarListas (ST_TODASLASLISTAS * todasLasListas, int * cliente, int * IDRes
         todasLasListas->cliente = *cliente;
         todasLasListas->reservapista = *IDReservaPista;
 }
+
 /******************************************//**
 *@fn  despegueAvion
-**suspende el proceso el tiempo especificado, simulando el tiempo
-**de despegue del avion, una vez finalizado, imprime un mensaje
-** indicando que el avion quedo en vuelo.
+*Suspende el proceso el tiempo especificado, simulando el tiempo
+de despegue del avion, una vez finalizado, imprime un mensaje
+indicando que el avion quedo en vuelo.
 *@param c1 int ID
 ********************************************/
 void despegueAvion (int ID){
@@ -41,11 +41,12 @@ void despegueAvion (int ID){
         printf("\t\tAvion %i en vuelo ✈ \n", ID);
 }
 
+
 /******************************************//**
 *@fn  aterrizajeAvion
-**suspende el proceso 25 segundos, simulando el tiempo de
-**aterrizaje del avion, una vez finalizado, imprime un mensaje
-** indicando que el avion aterrizo.
+*suspende el proceso 25 segundos, simulando el tiempo de
+aterrizaje del avion, una vez finalizado, imprime un mensaje
+indicando que el avion aterrizo.
 *@param c1 int ID
 ********************************************/
 void aterrizajeAvion (int ID){
@@ -54,10 +55,11 @@ void aterrizajeAvion (int ID){
         printf("\t\tAvion %i en hangar ✈ \n", ID);
 }
 
+
 /******************************************//**
 *@fn gestionarPista
-**Los aviones pueden solicitar pista para aterrizar.
-**gestionara el avance de la cola de espera de los aviones que esten para despegar.
+*Los aviones pueden solicitar pista para aterrizar.
+gestionara el avance de la cola de espera de los aviones que esten para despegar.
 *@param c1 ST_TODASLASLISTAS * todasLasListas
 ********************************************/
 void gestionarPista (ST_TODASLASLISTAS * todasLasListas){
